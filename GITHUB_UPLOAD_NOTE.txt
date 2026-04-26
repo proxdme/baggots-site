@@ -1,0 +1,11 @@
+Эта версия облегчена для GitHub.
+
+Как загрузить:
+1. Распакуй архив.
+2. Открой папку baggots-site-v7-github-light.
+3. Выдели ВСЁ содержимое внутри неё: index.html, styles.css, script.js, README.txt, images.
+4. В GitHub открой репозиторий → Add file → Upload files.
+5. Перетащи выделенные файлы и папку images.
+6. Нажми Commit changes.
+
+Важно: index.html должен лежать в корне репозитория, рядом с styles.css, script.js и папкой images.
