@@ -56,7 +56,7 @@ const bags = [
     status: "в наличии",
     price: "по запросу",
     short: "Британские флаги, газетный хаос и лёгкое чувство приключения.",
-    description: "Сумка с британскими флагами и газетным принтом. Очень “я вышел за хлебом и случайно стал заметным”.",
+    description: "Сумка с британскими флагами и газетным принтом. Очень в духе “я вышел за хлебом и случайно стал заметным”.",
     materials: "экокожа, Oxford 600D, полипропилен, полиэстер / по факту экземпляра",
     size: "примерно 300 × 150 × 70 мм",
     photos: ["images/london-mess-1.webp", "images/london-mess-2.svg", "images/london-mess-3.svg", "images/london-mess-4.svg", "images/london-mess-5.svg"]
@@ -119,8 +119,10 @@ const modalMaterials = document.querySelector("#modalMaterials");
 const modalSize = document.querySelector("#modalSize");
 const modalMainPhoto = document.querySelector("#modalMainPhoto");
 const modalThumbs = document.querySelector("#modalThumbs");
+const heroCarouselImage = document.querySelector("#heroCarouselImage");
 
 function renderCards() {
+  if (!bagsGrid) return;
   bagsGrid.innerHTML = bags.map((bag) => `
     <article class="bag-card" data-bag-id="${bag.id}" tabindex="0" aria-label="Открыть карточку ${bag.title}">
       <div class="bag-photo"><img src="${bag.photos[0]}" alt="${bag.title}" loading="lazy" decoding="async" /></div>
@@ -136,6 +138,7 @@ function renderCards() {
 }
 
 function openBag(bag) {
+  if (!modal) return;
   modalTitle.textContent = bag.title;
   modalStatus.textContent = bag.status;
   modalDescription.textContent = bag.description;
@@ -157,41 +160,78 @@ function openBag(bag) {
 }
 
 function hideModal() {
+  if (!modal) return;
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
 }
 
+function startHeroCarousel() {
+  if (!heroCarouselImage) return;
+
+  const gallery = bags.map((bag) => ({
+    src: bag.photos[0],
+    alt: `Поясная сумка baggots ${bag.title}`
+  }));
+
+  let current = 0;
+  const switchImage = () => {
+    current = (current + 1) % gallery.length;
+    heroCarouselImage.classList.add("is-fading");
+
+    setTimeout(() => {
+      heroCarouselImage.src = gallery[current].src;
+      heroCarouselImage.alt = gallery[current].alt;
+      heroCarouselImage.classList.remove("is-fading");
+    }, 220);
+  };
+
+  setInterval(switchImage, 3200);
+}
+
 renderCards();
+startHeroCarousel();
 
-bagsGrid.addEventListener("click", (event) => {
-  const card = event.target.closest("[data-bag-id]");
-  if (!card) return;
-  const bag = bags.find((item) => item.id === card.dataset.bagId);
-  if (bag) openBag(bag);
-});
+if (bagsGrid) {
+  bagsGrid.addEventListener("click", (event) => {
+    const card = event.target.closest("[data-bag-id]");
+    if (!card) return;
+    const bag = bags.find((item) => item.id === card.dataset.bagId);
+    if (bag) openBag(bag);
+  });
 
-bagsGrid.addEventListener("keydown", (event) => {
-  if (event.key !== "Enter") return;
-  const card = event.target.closest("[data-bag-id]");
-  if (!card) return;
-  const bag = bags.find((item) => item.id === card.dataset.bagId);
-  if (bag) openBag(bag);
-});
+  bagsGrid.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const card = event.target.closest("[data-bag-id]");
+    if (!card) return;
+    const bag = bags.find((item) => item.id === card.dataset.bagId);
+    if (bag) openBag(bag);
+  });
+}
 
 const labCard = document.querySelector("[data-open-lab]");
-labCard.addEventListener("click", () => openBag(lab));
-labCard.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") openBag(lab);
-});
+if (labCard) {
+  labCard.addEventListener("click", () => openBag(lab));
+  labCard.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") openBag(lab);
+  });
+}
 
-closeModal.addEventListener("click", hideModal);
-modal.addEventListener("click", (event) => { if (event.target === modal) hideModal(); });
-modalThumbs.addEventListener("click", (event) => {
-  const thumb = event.target.closest(".thumb");
-  if (!thumb) return;
-  modalMainPhoto.src = thumb.dataset.photo;
-  modalThumbs.querySelectorAll(".thumb").forEach((item) => item.classList.remove("active"));
-  thumb.classList.add("active");
+if (closeModal) closeModal.addEventListener("click", hideModal);
+if (modal) {
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) hideModal();
+  });
+}
+if (modalThumbs) {
+  modalThumbs.addEventListener("click", (event) => {
+    const thumb = event.target.closest(".thumb");
+    if (!thumb) return;
+    modalMainPhoto.src = thumb.dataset.photo;
+    modalThumbs.querySelectorAll(".thumb").forEach((item) => item.classList.remove("active"));
+    thumb.classList.add("active");
+  });
+}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") hideModal();
 });
-document.addEventListener("keydown", (event) => { if (event.key === "Escape") hideModal(); });

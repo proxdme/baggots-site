@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>baggots — поясные сумки с G.O.A.T характером</title>
-  <meta name="description" content="baggots — уникальные поясные сумки ручной работы, зато живое. Не конвейер, а G.O.A.T магия." />
+  <meta name="description" content="baggots — поясные сумки ручной работы с G.O.A.T характером. Лёгкие, практичные, заметные и не скучные." />
   <link rel="icon" href="images/brand/logo-avatar.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="page-watermark" aria-hidden="true"></div>
+
   <header class="topbar">
     <div class="container nav">
-      <!-- Чтобы заменить логотип в шапке, положи новый файл по пути images/brand/logo-header.svg
-           или измени src у картинки ниже. Для круглой аватарки используется images/brand/logo-avatar.png. -->
       <a class="brand" href="#top" aria-label="baggots">
         <img class="brand-logo" src="images/brand/logo-header.svg" alt="baggots" />
       </a>
@@ -33,30 +33,27 @@
 
   <main id="top">
     <section class="container hero">
-      <div>
-        <div class="eyebrow">ручная работа · upcycling · a signature brand</div>
+      <div class="hero-copy">
         <h1>Поясные сумки с <span>G.O.A.T</span> характером</h1>
-        <p class="lead">baggots — поясные сумки с принтом или без: лёгкие, практичные и заметные. Немного криво, зато живое. Не конвейер, а G.O.A.T магия.</p>
+        <p class="lead">
+          baggots — поясные сумки с принтом или без: лёгкие, практичные и заметные.
+          Надёжный спутник ваших приключений. Большой тяжёлый портфель уже никому не нужен —
+          небольшая, но стильная сумка baggots поможет держать всё нужное под рукой.
+          Немного криво, зато живое. Не конвейер, а G.O.A.T магия.
+        </p>
         <div class="hero-actions">
           <a class="btn primary" href="#bags">Смотреть сумки</a>
           <a class="btn red disabled" href="#contacts" aria-disabled="true">MAX скоро</a>
           <a class="btn ghost" href="https://vk.com/baggots" target="_blank" rel="noopener">VK</a>
         </div>
       </div>
-      <div class="hero-card hero-slider" aria-label="Слайдер сумок baggots">
-  <img
-    id="heroRotator"
-    class="hero-rotator-image"
-    src="images/red-zip-1.webp"
-    alt="Поясная сумка baggots"
-    fetchpriority="high"
-    decoding="async"
-  />
 
-  <div class="sticker">Каждая сумка — отдельный шалун. Повторить можно настроение, но не копию.</div>
-
-  <div class="hero-slider-dots" id="heroSliderDots" aria-label="Индикатор слайдера"></div>
-</div>
+      <div class="hero-card">
+        <div class="hero-stage">
+          <img id="heroCarouselImage" src="images/red-zip-1.webp" alt="Поясная сумка baggots" fetchpriority="high" decoding="async" />
+        </div>
+        <div class="sticker">Каждая сумка — отдельный шалун. Повторить можно настроение, но не копию.</div>
+      </div>
     </section>
 
     <section id="about">
@@ -64,22 +61,37 @@
         <div class="about-card big">
           <h3>Не фабрика. Не партия.</h3>
           <div class="about-text">
-            <p>Сумки, сшитые вручную из разных материалов: ткани, принтов, упаковок, остатков и всего, что внезапно просится стать сумкой.</p>
-            <p>Каждую можно носить на поясе или как кросс-боди.</p>
+            <p>Шьём вручную из разных тканей, денима, упаковок и всего, что просится стать сумкой. Даём материалам вторую жизнь и превращаем их в удобные, заметные вещи с характером.</p>
+            <p>Каждая — не тираж, а отдельная история. Можно носить на поясе или как кросс-боди.</p>
           </div>
-          <div class="flag-row" aria-label="вдохновения и флаги стран присутствия"><span>AU</span><span>US</span><span>IT</span></div>
         </div>
+
         <div class="about-card about-card-right">
           <h3>Не скучно.<br>Зато живое.</h3>
           <div class="about-text about-text-lower">
-            <p>Здесь нет заводской стерильности. Иногда шов чуть шалит, ткань спорит с молнией, а козлик внутри бренда явно доволен.</p>
-            <p>Зато каждая сумка получается заметной, удобной и непохожей.</p>
+            <p>Яркие цвета, принты, нашивки и странные — в хорошем смысле — детали. Мы не гонимся за идеалом: делаем сумки, которые хочется носить и которые выделяют вас из стада.</p>
+            <p>Поэтому baggots не выглядят как бездушный поток с конвейера — у каждой сумки свой вайб и своё настроение.</p>
           </div>
         </div>
       </div>
     </section>
 
-
+    <section class="travel-strip" aria-label="Где уже гуляют baggots">
+      <div class="container travel-inner">
+        <div class="travel-copy">
+          <div class="travel-icon">⌁</div>
+          <div>
+            <h2>Где уже гуляют baggots</h2>
+            <p>Наши сумки уже нашли счастливых владельцев в Австралии, США и Италии. Присоединяйся.</p>
+          </div>
+        </div>
+        <div class="travel-flags" aria-label="страны, где уже есть baggots">
+          <div class="country-pill"><span class="flag">🇦🇺</span><span>Австралия</span></div>
+          <div class="country-pill"><span class="flag">🇺🇸</span><span>США</span></div>
+          <div class="country-pill"><span class="flag">🇮🇹</span><span>Италия</span></div>
+        </div>
+      </div>
+    </section>
 
     <section id="product-story">
       <div class="container product-story">
@@ -101,7 +113,7 @@
           <article class="lang-card accent">
             <span class="lang-label">EN</span>
             <h3>Belt bag</h3>
-            <p>A baggots belt bag with or without prints. Lightweight and comfy, stylish and eye-catching. Thanks to the adjustable strap, it can also be worn as a crossbody.</p>
+            <p>A BAGGOTS belt bag with or without prints. Lightweight and comfy, stylish and eye-catching. Thanks to the adjustable strap, it can also be worn as a crossbody.</p>
             <p>The spacious main compartment can transform into two functional zones, has a key clip and closes with a zipper. The additional outer zipped pocket is perfect for small items, a mask, a bank card and other pocket-sized essentials.</p>
             <p>An ideal companion for long walks and trips.</p>
             <ul>
@@ -117,7 +129,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Сумки</h2>
-          <p>Карточки можно использовать и для вещей в наличии, и для проданных экземпляров: продана — не беда, можно обсудить похожую G.O.A.T историю.</p>
+          <p>Карточки можно использовать и для вещей в наличии, и для уже проданных экземпляров: продана — не беда, можно обсудить похожую G.O.A.T историю.</p>
         </div>
         <div class="grid" id="bagsGrid"></div>
       </div>
