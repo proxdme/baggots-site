@@ -43,10 +43,21 @@
           <a class="btn ghost" href="https://vk.com/baggots" target="_blank" rel="noopener">VK</a>
         </div>
       </div>
-      <div class="hero-card">
-        <img src="images/red-zip-1.webp" alt="Поясная сумка baggots Red Zip" fetchpriority="high" decoding="async" />
-        <div class="sticker">Каждая сумка — отдельный шалун. Повторить можно настроение, но не копию.</div>
-      </div>
+      <div class="hero-card hero-slider" aria-label="Слайдер сумок baggots">
+  <img
+    id="heroRotator"
+    class="hero-rotator-image"
+    src="images/red-zip-1.webp"
+    alt="Поясная сумка baggots"
+    fetchpriority="high"
+    decoding="async"
+  />
+
+  <div class="sticker">Каждая сумка — отдельный шалун. Повторить можно настроение, но не копию.</div>
+
+  <div class="hero-slider-dots" id="heroSliderDots" aria-label="Индикатор слайдера"></div>
+</div>
+
     </section>
 
     <section id="about">
