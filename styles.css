@@ -105,70 +105,164 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
 .flag-row span { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 16px; background: white; border: 1px solid var(--line); box-shadow: 0 8px 18px rgba(30,30,30,.06); font-size: 24px; }
 .hero-card, .bag-photo, .main-modal-photo, .thumb { border-radius: 28px; }
 
-.hero-slider {
-  position: relative;
-}
-
-.hero-rotator-image {
-  width: 100%;
-  height: 100%;
-  min-height: 460px;
-  object-fit: contain;
-  padding: 22px;
-  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.18));
-  opacity: 1;
-  transition: opacity 0.45s ease, transform 0.45s ease;
-}
-
-.hero-rotator-image.is-fading {
-  opacity: 0;
-  transform: scale(0.985);
-}
-
-.hero-slider-dots {
-  position: absolute;
-  right: 22px;
-  bottom: 22px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  z-index: 3;
-  padding: 8px 10px;
-  border-radius: 999px;
-  background: rgba(255, 250, 242, 0.72);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(10px);
-}
-
-.hero-slider-dot {
-  width: 9px;
-  height: 9px;
-  border: 0;
-  padding: 0;
-  border-radius: 50%;
-  background: rgba(117, 111, 104, 0.35);
-  cursor: pointer;
-}
-
-.hero-slider-dot.active {
-  width: 22px;
-  border-radius: 999px;
-  background: var(--red);
-}
-
-@media (max-width: 620px) {
-  .hero-rotator-image {
-    min-height: 330px;
-    padding: 14px;
-  }
-
-  .hero-slider-dots {
-    right: 14px;
-    bottom: 14px;
-  }
-}
-
 @media (max-width: 900px) { .hero, .about, .contact-panel, .modal-inner, .lab-card, .lang-grid { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .section-head { align-items: start; flex-direction: column; } .nav { align-items: start; flex-direction: column; padding: 16px 0; } .nav-links { flex-wrap: wrap; font-size: 20px; gap: 18px; } }
 @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: clamp(38px, 12vw, 58px); } .hero { padding-top: 38px; } .hero-card, .hero-card img { min-height: 330px; } .sticker { max-width: calc(100% - 40px); font-size: 14px; box-shadow: 5px 5px 0 var(--text); } .bag-photo { height: 230px; } .thumbs { grid-template-columns: repeat(3, 1fr); } .nav-links { font-size: 18px; } }
 
 @media (max-width: 620px) { .brand-logo { width: min(280px, 78vw); max-height: 64px; } }
+
+
+/* ===== v8 final corrections ===== */
+
+/* Убираем декоративные уголки/псевдоэлементы на фото */
+.hero-card::before,
+.hero-card::after,
+.hero-slider::before,
+.hero-slider::after,
+.hero-media::before,
+.hero-media::after,
+.product-stage::before,
+.product-stage::after,
+.product-gallery__main::before,
+.product-gallery__main::after,
+.modal-gallery__main::before,
+.modal-gallery__main::after,
+.main-modal-photo::before,
+.main-modal-photo::after,
+.bag-photo::before,
+.bag-photo::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Более мягкая подача изображений без лишнего декора */
+.hero-card,
+.hero-slider,
+.main-modal-photo,
+.bag-photo,
+.thumb {
+  border-radius: 30px !important;
+  overflow: hidden !important;
+}
+
+.hero-card img,
+.hero-slider img,
+.main-modal-photo img,
+.bag-photo img,
+.thumb img {
+  border-radius: 24px !important;
+}
+
+/* О бренде: светлые карточки, без черного пятна */
+.about {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.about-card,
+.about-card.big,
+.about-card-right {
+  min-height: 300px;
+  background: #fffaf2 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 34px 36px;
+  box-shadow: 0 14px 34px rgba(17,118,201,.06);
+}
+
+.about-card.big {
+  background: linear-gradient(135deg, var(--blue-soft), #fffaf2 76%) !important;
+}
+
+.about-card h3,
+.about-card.big h3,
+.about-card-right h3 {
+  margin: 0;
+  color: var(--blue) !important;
+  font-family: "Montserrat Alternates", "Nunito Sans", Arial, sans-serif;
+  font-size: clamp(32px, 3.2vw, 54px);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  font-weight: 900;
+  min-height: 2.15em;
+}
+
+.about-text {
+  margin-top: 24px;
+}
+
+.about-text-lower {
+  margin-top: 52px;
+}
+
+.about-card p,
+.about-card.big p,
+.about-card-right p {
+  margin: 0 0 14px;
+  color: var(--muted) !important;
+  font-size: 19px;
+  line-height: 1.58;
+  font-weight: 600;
+}
+
+.flag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.flag-row span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: var(--blue);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 22px rgba(30,30,30,.07);
+  font-weight: 900;
+  font-size: 17px;
+}
+
+/* Блок "Поясная сумка / Belt bag": без текста справа */
+.section-head.compact {
+  align-items: start;
+}
+
+.section-head.compact > p {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card h3,
+  .about-card.big h3,
+  .about-card-right h3 {
+    min-height: auto;
+  }
+
+  .about-text-lower {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-card,
+  .about-card.big,
+  .about-card-right {
+    padding: 26px 22px;
+  }
+
+  .flag-row span {
+    width: 50px;
+    height: 50px;
+  }
+}
