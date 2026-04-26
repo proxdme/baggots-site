@@ -544,3 +544,20 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
   box-shadow: 0 0 0 1px rgba(30, 30, 30, 0.14);
   flex: 0 0 auto;
 }
+
+
+/* Inline SVG-флаги: без внешних файлов, поэтому не могут «слететь» */
+.country-pill .flag-img {
+  display: none;
+}
+
+.country-pill .flag-svg {
+  width: 40px;
+  height: 26px;
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(30, 30, 30, 0.16);
+  flex: 0 0 auto;
+  background: #fff;
+}
