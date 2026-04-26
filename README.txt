@@ -18,3 +18,7 @@
 
 Если будешь заливать в GitHub:
 - держи index.html, styles.css, script.js и папку images в корне репозитория.
+
+
+Обновление flags:
+- emoji-флаги заменены на SVG-файлы в images/flags, чтобы Windows/браузеры не показывали AU/US/IT вместо флагов.
