@@ -59,7 +59,7 @@ const bags = [
     description: "Сумка с британскими флагами и газетным принтом. Очень в духе “я вышел за хлебом и случайно стал заметным”.",
     materials: "экокожа, Oxford 600D, полипропилен, полиэстер / по факту экземпляра",
     size: "примерно 300 × 150 × 70 мм",
-    photos: ["images/outdoor/british-01.webp", "images/outdoor/british-02.webp", "images/outdoor/british-03.webp", "images/outdoor/british-05.webp", "images/london-mess-1.webp"]
+    photos: ["images/london-mess-1.webp", "images/london-mess-2.svg", "images/london-mess-3.svg", "images/london-mess-4.svg", "images/london-mess-5.svg"]
   },
   {
     id: "craft-one",
@@ -92,7 +92,43 @@ const bags = [
     description: "Деним, жёлтые молнии и внешний карман. Самая понятная из компании, но козлик всё равно где-то рядом.",
     materials: "экокожа, Oxford 600D, полипропилен, полиэстер / по факту экземпляра",
     size: "примерно 300 × 150 × 70 мм",
-    photos: ["images/outdoor/denim-01.webp", "images/outdoor/denim-02.webp", "images/outdoor/inside-01.webp", "images/denim-pocket-1.webp", "images/denim-pocket-2.svg"]
+    photos: ["images/denim-pocket-1.webp", "images/denim-pocket-2.svg", "images/denim-pocket-3.svg", "images/denim-pocket-4.svg", "images/denim-pocket-5.svg"]
+  }
+];
+
+
+const useCases = [
+  {
+    id: "london-mess-outdoor",
+    title: "London Mess в жизни",
+    status: "пример использования",
+    price: "не товарная карточка",
+    short: "Outdoor-ракурсы London Mess.",
+    description: "London Mess в реальной носке: в руках, кросс-боди, со спины и внутри. Здесь видно масштаб, посадку и то, как сумка ведёт себя не на белом фоне, а в жизни.",
+    materials: "живые фото London Mess",
+    size: "ракурсы, носка, детали",
+    photos: [
+      "images/outdoor/british-01.webp",
+      "images/outdoor/british-02.webp",
+      "images/outdoor/british-03.webp",
+      "images/outdoor/british-04.webp",
+      "images/outdoor/british-05.webp"
+    ]
+  },
+  {
+    id: "denim-pocket-outdoor",
+    title: "Denim Pocket в жизни",
+    status: "пример использования",
+    price: "не товарная карточка",
+    short: "Outdoor-ракурсы Denim Pocket.",
+    description: "Denim Pocket в живой носке: крупный план, посадка на корпусе, детали и полезный объём. Спокойная джинсовая версия без лишнего шума, но со своим характером.",
+    materials: "живые фото Denim Pocket",
+    size: "ракурсы, носка, детали",
+    photos: [
+      "images/outdoor/denim-01.webp",
+      "images/outdoor/denim-02.webp",
+      "images/outdoor/inside-01.webp"
+    ]
   }
 ];
 
@@ -221,6 +257,20 @@ if (bagsGrid) {
     if (bag) openBag(bag);
   });
 }
+
+
+document.querySelectorAll("[data-use-case-id]").forEach((card) => {
+  card.addEventListener("click", () => {
+    const item = useCases.find((useCase) => useCase.id === card.dataset.useCaseId);
+    if (item) openBag(item);
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const item = useCases.find((useCase) => useCase.id === card.dataset.useCaseId);
+    if (item) openBag(item);
+  });
+});
 
 const labCard = document.querySelector("[data-open-lab]");
 if (labCard) {
