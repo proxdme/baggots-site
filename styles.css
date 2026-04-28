@@ -921,3 +921,61 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===== FIX v3: карточки использования и 9-я карточка каталога ===== */
+.use-card[data-bag-id] {
+  cursor: pointer;
+}
+
+.use-card[data-bag-id]:hover .use-card__content h3 {
+  color: var(--red);
+}
+
+.bag-card--repair {
+  display: grid !important;
+  place-items: center !important;
+  min-height: 310px !important;
+  padding: 14px !important;
+  border: 2px dashed rgba(17, 118, 201, .38) !important;
+  background:
+    linear-gradient(135deg, rgba(232, 242, 255, .92), rgba(255, 250, 242, .94)),
+    repeating-linear-gradient(-45deg, #f6f1e9, #f6f1e9 18px, #f1ebe1 18px, #f1ebe1 36px) !important;
+  box-shadow: 0 8px 22px rgba(30,30,30,.06) !important;
+}
+
+.bag-card--repair .repair-banner {
+  text-align: center;
+}
+
+.bag-card--repair .repair-banner span {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.bag-card--repair .repair-banner h3 {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-family: "Montserrat Alternates", "Nunito Sans", Arial, sans-serif;
+  font-size: 26px;
+  line-height: 1.04;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.bag-card--repair .repair-banner p {
+  margin: 0 auto;
+  max-width: 240px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 700;
+}

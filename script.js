@@ -59,7 +59,7 @@ const bags = [
     description: "Сумка с британскими флагами и газетным принтом. Очень в духе “я вышел за хлебом и случайно стал заметным”.",
     materials: "экокожа, Oxford 600D, полипропилен, полиэстер / по факту экземпляра",
     size: "примерно 300 × 150 × 70 мм",
-    photos: ["images/london-mess-1.webp", "images/outdoor/british-01.webp", "images/outdoor/british-02.webp", "images/outdoor/british-03.webp", "images/outdoor/british-05.webp"]
+    photos: ["images/outdoor/british-01.webp", "images/outdoor/british-02.webp", "images/outdoor/british-03.webp", "images/outdoor/british-05.webp", "images/london-mess-1.webp"]
   },
   {
     id: "craft-one",
@@ -92,7 +92,7 @@ const bags = [
     description: "Деним, жёлтые молнии и внешний карман. Самая понятная из компании, но козлик всё равно где-то рядом.",
     materials: "экокожа, Oxford 600D, полипропилен, полиэстер / по факту экземпляра",
     size: "примерно 300 × 150 × 70 мм",
-    photos: ["images/denim-pocket-1.webp", "images/outdoor/denim-01.webp", "images/outdoor/denim-02.webp", "images/outdoor/inside-01.webp", "images/denim-pocket-2.svg"]
+    photos: ["images/outdoor/denim-01.webp", "images/outdoor/denim-02.webp", "images/outdoor/inside-01.webp", "images/denim-pocket-1.webp", "images/denim-pocket-2.svg"]
   }
 ];
 
