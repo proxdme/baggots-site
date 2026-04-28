@@ -779,3 +779,145 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
 
 /* Outdoor-фото лежат строго здесь: images/outdoor/*.webp */
 /* Флаги лежат строго здесь: images/flags/*.svg */
+
+
+/* ===== FINAL FIX v2: шапка, 3 use-cases, 9-я карточка ===== */
+
+/* Шапка: возвращаем нормальную читаемость и не даём пунктам разваливаться */
+.nav {
+  gap: 26px;
+}
+
+.brand-logo {
+  width: min(330px, 36vw);
+  max-height: 78px;
+}
+
+.nav-links {
+  gap: clamp(16px, 1.8vw, 26px);
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Раздел "Примеры использования": теперь только 3 посадочных места */
+.use-cases-grid--compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.use-card--feature {
+  cursor: pointer;
+}
+
+.use-card--feature .use-card__image {
+  aspect-ratio: 4 / 5;
+}
+
+.use-card--feature .use-card__image img {
+  object-fit: cover;
+}
+
+/* 9-я карточка в каталоге сумок */
+.bag-card--repair {
+  display: grid;
+  place-items: center;
+  min-height: 360px;
+  border: 2px dashed rgba(17, 118, 201, .34);
+  background:
+    linear-gradient(135deg, rgba(232, 242, 255, .92), rgba(255, 250, 242, .94)),
+    repeating-linear-gradient(
+      -45deg,
+      #f6f1e9,
+      #f6f1e9 18px,
+      #f1ebe1 18px,
+      #f1ebe1 36px
+    );
+  cursor: default;
+}
+
+.bag-card--repair:hover {
+  transform: none;
+  box-shadow: 0 8px 22px rgba(30,30,30,.06);
+}
+
+.repair-banner {
+  padding: 26px 20px;
+  text-align: center;
+}
+
+.repair-banner span {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.repair-banner h3 {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-family: "Montserrat Alternates", "Nunito Sans", Arial, sans-serif;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.04;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.repair-banner p {
+  margin: 0 auto;
+  max-width: 260px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/* На средних экранах меню переносится только целыми пунктами */
+@media (max-width: 1120px) {
+  .brand-logo {
+    width: min(300px, 34vw);
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 0;
+  }
+
+  .brand-logo {
+    width: min(300px, 78vw);
+    max-height: 70px;
+  }
+
+  .nav-links {
+    white-space: normal;
+    flex-wrap: wrap;
+    font-size: 18px;
+    gap: 14px 18px;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .use-cases-grid--compact {
+    grid-template-columns: 1fr;
+  }
+}

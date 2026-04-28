@@ -59,7 +59,7 @@ const bags = [
     description: "Сумка с британскими флагами и газетным принтом. Очень в духе “я вышел за хлебом и случайно стал заметным”.",
     materials: "экокожа, Oxford 600D, полипропилен, полиэстер / по факту экземпляра",
     size: "примерно 300 × 150 × 70 мм",
-    photos: ["images/london-mess-1.webp", "images/london-mess-2.svg", "images/london-mess-3.svg", "images/london-mess-4.svg", "images/london-mess-5.svg"]
+    photos: ["images/london-mess-1.webp", "images/outdoor/british-01.webp", "images/outdoor/british-02.webp", "images/outdoor/british-03.webp", "images/outdoor/british-05.webp"]
   },
   {
     id: "craft-one",
@@ -92,7 +92,7 @@ const bags = [
     description: "Деним, жёлтые молнии и внешний карман. Самая понятная из компании, но козлик всё равно где-то рядом.",
     materials: "экокожа, Oxford 600D, полипропилен, полиэстер / по факту экземпляра",
     size: "примерно 300 × 150 × 70 мм",
-    photos: ["images/denim-pocket-1.webp", "images/denim-pocket-2.svg", "images/denim-pocket-3.svg", "images/denim-pocket-4.svg", "images/denim-pocket-5.svg"]
+    photos: ["images/denim-pocket-1.webp", "images/outdoor/denim-01.webp", "images/outdoor/denim-02.webp", "images/outdoor/inside-01.webp", "images/denim-pocket-2.svg"]
   }
 ];
 
@@ -123,7 +123,8 @@ const heroCarouselImage = document.querySelector("#heroCarouselImage");
 
 function renderCards() {
   if (!bagsGrid) return;
-  bagsGrid.innerHTML = bags.map((bag) => `
+
+  const bagCards = bags.map((bag) => `
     <article class="bag-card" data-bag-id="${bag.id}" tabindex="0" aria-label="Открыть карточку ${bag.title}">
       <div class="bag-photo"><img src="${bag.photos[0]}" alt="${bag.title}" loading="lazy" decoding="async" /></div>
       <div class="bag-info">
@@ -135,6 +136,18 @@ function renderCards() {
       </div>
     </article>
   `).join("");
+
+  const repairCard = `
+    <article class="bag-card bag-card--repair" aria-label="Место под будущую сумку">
+      <div class="repair-banner">
+        <span>coming soon</span>
+        <h3>TEMPORARILY<br>UNDER RENOVATION</h3>
+        <p>Another bag is getting ready to steal the spotlight.</p>
+      </div>
+    </article>
+  `;
+
+  bagsGrid.innerHTML = bagCards + repairCard;
 }
 
 function openBag(bag) {
