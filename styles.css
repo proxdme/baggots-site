@@ -15,28 +15,32 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
-  line-height: 1.55;
   position: relative;
-  overflow-x: hidden;
+}
+
+header,
+main,
+section,
+footer {
+  position: relative;
+  z-index: 1;
 }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 .container { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
 
-.page-watermark {
+.site-world-map {
   position: fixed;
-  inset: 120px auto auto 50%;
-  width: min(900px, 72vw);
-  height: min(620px, 52vw);
-  transform: translateX(-6%);
-  background: url("images/brand/goat-watermark.png") center/contain no-repeat;
-  opacity: .13;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
+
+  background-image: url("images/world-map-presence.png");
+  background-repeat: no-repeat;
+  background-position: center 140px;
+  background-size: min(1100px, 90vw);
+
+  opacity: 0.14;
 }
 
 .topbar {
