@@ -998,3 +998,173 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
 .use-card[data-use-case-id]:hover .use-card__content h3 {
   color: var(--red);
 }
+
+/* ===== BAGGOTTS PATCH v2: новости со скроллом после RU/EN описания ===== */
+.news-section {
+  padding: 44px 0 54px;
+}
+
+.news-head {
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.news-scroll {
+  max-height: 430px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 10px 0 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(223, 55, 45, .7) rgba(222, 214, 201, .55);
+}
+
+.news-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.news-scroll::-webkit-scrollbar-track {
+  background: rgba(222, 214, 201, .55);
+  border-radius: 999px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+  background: rgba(223, 55, 45, .72);
+  border-radius: 999px;
+}
+
+.news-item {
+  position: relative;
+  padding: 28px 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(223,55,45,.12), transparent 24%),
+    radial-gradient(circle at 92% 8%, rgba(17,118,201,.10), transparent 26%),
+    rgba(255,250,242,.96);
+  box-shadow: 0 12px 30px rgba(30,30,30,.07);
+}
+
+.news-item + .news-item {
+  margin-top: 16px;
+}
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.news-meta time,
+.news-meta span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.news-meta time {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.news-meta span {
+  background: var(--red);
+  color: #fff;
+}
+
+.news-item h3 {
+  margin: 0 0 14px;
+  color: var(--blue);
+  font-family: "Montserrat Alternates", "Nunito Sans", Arial, sans-serif;
+  font-size: clamp(30px, 3.8vw, 46px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.news-item p {
+  max-width: 920px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.62;
+  font-weight: 650;
+}
+
+.news-item p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+  Чтобы добавить новую новость:
+  1) скопировать <article class="news-item">...</article>;
+  2) вставить её первой внутри <div class="news-scroll">;
+  3) поменять дату, метку, заголовок и текст.
+  Высота раздела не раздуется: новые записи будут прокручиваться внутри .news-scroll.
+*/
+
+/* ===== BAGGOTTS PATCH v2: карта городов заметнее и без обрезания на мобильных ===== */
+.site-world-map {
+  background-position: center clamp(96px, 12vw, 140px);
+  background-size: min(1180px, 96vw) auto;
+  background-origin: border-box;
+  overflow: visible;
+  opacity: 0.24;
+}
+
+@media (max-width: 900px) {
+  .site-world-map {
+    background-position: center 124px;
+    background-size: 112vw auto;
+    opacity: 0.22;
+  }
+}
+
+@media (max-width: 620px) {
+  .news-section {
+    padding: 40px 0 46px;
+  }
+
+  .news-head {
+    margin-bottom: 16px;
+  }
+
+  .news-scroll {
+    max-height: 360px;
+    padding-right: 6px;
+  }
+
+  .news-item {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .news-item p {
+    font-size: 16px;
+  }
+
+  .site-world-map {
+    position: absolute;
+    inset: 0;
+    min-height: 100%;
+    background-position: center 96px;
+    background-size: 138vw auto;
+    opacity: 0.20;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-world-map {
+    background-position: center 90px;
+    background-size: 154vw auto;
+    opacity: 0.20;
+  }
+}
+
