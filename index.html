@@ -1,281 +1,233 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>baggots — поясные сумки с G.O.A.T характером</title>
-  <meta name="description" content="baggots — поясные сумки ручной работы с G.O.A.T характером. Лёгкие, практичные, заметные и не скучные." />
-  <link rel="icon" href="images/brand/logo-avatar.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <title>BAGGOTTS — travel bags & everyday carry</title>
+  <meta name="description" content="BAGGOTTS — сумки для города, путешествий и ежедневного движения." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-watermark" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="BAGGOTTS home">
+      <span class="logo-mark">B</span>
+      <span class="logo-text">BAGGOTTS</span>
+    </a>
 
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="baggots">
-        <img class="brand-logo" src="images/brand/logo-header.svg" alt="baggots" />
-      </a>
-      <nav class="nav-links" aria-label="Навигация">
-        <a href="#bags">Сумки</a>
-        <a href="#lab">Goat Lab</a>
-        <a href="#about">О бренде</a>
-        <a href="#product-story">Описание</a>
-        <a href="https://vk.com/baggots" target="_blank" rel="noopener">VK</a>
-        <a href="https://www.instagram.com/baggots_shop/" target="_blank" rel="noopener">Instagram</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-    </div>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav">
+      <a href="#about">О бренде</a>
+      <a href="#news">Новости</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#use-cases">Примеры использования</a>
+      <a href="#world">География</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="container hero">
-      <div class="hero-copy">
-        <h1>Поясные сумки с <span>G.O.A.T</span> характером</h1>
-        <p class="lead">
-          baggots — поясные сумки с принтом или без: лёгкие, практичные и заметные.
-          Надёжный спутник ваших приключений. Большой тяжёлый портфель уже никому не нужен —
-          небольшая, но стильная сумка baggots поможет держать всё нужное под рукой.
-          Немного криво, зато живое. Не конвейер, а G.O.A.T магия.
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Travel bags · Urban carry · Outdoor mood</p>
+        <h1>Сумки BAGGOTTS для дороги, города и тех самых планов «на пару дней».</h1>
+        <p class="hero-text">
+          Практичные формы, плотные материалы и спокойный дизайн без лишнего шума.
+          Чтобы вещи были на месте, а вы — уже в движении.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#bags">Смотреть сумки</a>
-          <a class="btn red disabled" href="#contacts" aria-disabled="true">MAX скоро</a>
-          <a class="btn ghost" href="https://vk.com/baggots" target="_blank" rel="noopener">VK</a>
+          <a class="button primary" href="#catalog">Смотреть каталог</a>
+          <a class="button secondary" href="#world">Города бренда</a>
         </div>
       </div>
-
-      <div class="hero-card">
-        <div class="hero-stage">
-          <img id="heroCarouselImage" src="images/red-zip-1.webp" alt="Поясная сумка baggots" fetchpriority="high" decoding="async" />
-        </div>
-        <div class="sticker">Каждая сумка — отдельный шалун. Повторить можно настроение, но не копию.</div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container about">
-        <div class="about-card big">
-          <h3>Не фабрика. Не партия.</h3>
-          <div class="about-text">
-            <p>Шьём вручную из разных тканей, денима, упаковок и всего, что просится стать сумкой. Даём материалам вторую жизнь и превращаем их в удобные, заметные вещи с характером.</p>
-            <p>Каждая — не тираж, а отдельная история. Можно носить на поясе или как кросс-боди.</p>
-          </div>
-        </div>
-
-        <div class="about-card about-card-right">
-          <h3>Не скучно.<br>Зато живое.</h3>
-          <div class="about-text about-text-lower">
-            <p>Яркие цвета, принты, нашивки и странные — в хорошем смысле — детали. Мы не гонимся за идеалом: делаем сумки, которые хочется носить и которые выделяют вас из стада.</p>
-            <p>Поэтому baggots не выглядят как бездушный поток с конвейера — у каждой сумки свой вайб и своё настроение.</p>
-          </div>
+      <div class="hero-card" aria-label="BAGGOTTS bag preview">
+        <div class="bag-illustration">
+          <div class="bag-handle"></div>
+          <div class="bag-body"></div>
+          <div class="bag-pocket"></div>
+          <div class="bag-tag">B</div>
         </div>
       </div>
     </section>
 
-    <section class="travel-strip" aria-label="Где уже гуляют baggots">
-      <div class="container travel-inner">
-        <div class="travel-copy">
-          <div class="travel-icon">⌁</div>
-          <div>
-            <h2>Где уже гуляют baggots</h2>
-            <p>Наши сумки уже нашли счастливых владельцев в Австралии, США и Италии. Присоединяйся.</p>
-          </div>
-        </div>
-        <div class="travel-flags" aria-label="страны, где уже есть baggots">
-          <div class="country-pill"><svg class="flag-svg" viewBox="0 0 60 36" aria-label="Флаг Австралии" role="img">
-  <rect width="60" height="36" fill="#012169"/>
-  <g transform="scale(.5)">
-    <path d="M0 0l60 36M60 0L0 36" stroke="#fff" stroke-width="7.2"/>
-    <path d="M0 0l60 36M60 0L0 36" stroke="#C8102E" stroke-width="4"/>
-    <path d="M30 0v36M0 18h60" stroke="#fff" stroke-width="12"/>
-    <path d="M30 0v36M0 18h60" stroke="#C8102E" stroke-width="7"/>
-  </g>
-  <g fill="#fff">
-    <polygon points="45,6 46.2,9.5 49.8,9.5 46.9,11.6 48,15 45,12.9 42,15 43.1,11.6 40.2,9.5 43.8,9.5"/>
-    <polygon points="50,22 50.8,24.2 53.1,24.2 51.2,25.6 51.9,27.8 50,26.4 48.1,27.8 48.8,25.6 46.9,24.2 49.2,24.2"/>
-    <polygon points="38,18 38.8,20.2 41.1,20.2 39.2,21.6 39.9,23.8 38,22.4 36.1,23.8 36.8,21.6 34.9,20.2 37.2,20.2"/>
-    <polygon points="48,30 48.7,32 50.8,32 49.1,33.2 49.8,35.2 48,34 46.2,35.2 46.9,33.2 45.2,32 47.3,32"/>
-    <polygon points="32,27 32.7,29 34.8,29 33.1,30.2 33.8,32.2 32,31 30.2,32.2 30.9,30.2 29.2,29 31.3,29"/>
-  </g>
-</svg><span>Австралия</span></div>
-          <div class="country-pill"><svg class="flag-svg" viewBox="0 0 60 36" aria-label="Флаг США" role="img">
-  <rect width="60" height="36" fill="#fff"/>
-  <g fill="#B22234">
-    <rect width="60" height="2.77" y="0"/><rect width="60" height="2.77" y="5.54"/><rect width="60" height="2.77" y="11.08"/><rect width="60" height="2.77" y="16.62"/><rect width="60" height="2.77" y="22.15"/><rect width="60" height="2.77" y="27.69"/><rect width="60" height="2.77" y="33.23"/>
-  </g>
-  <rect width="27" height="19.4" fill="#3C3B6E"/>
-  <g fill="#fff">
-    <circle cx="3" cy="3" r=".8"/><circle cx="7" cy="3" r=".8"/><circle cx="11" cy="3" r=".8"/><circle cx="15" cy="3" r=".8"/><circle cx="19" cy="3" r=".8"/><circle cx="23" cy="3" r=".8"/>
-    <circle cx="5" cy="6" r=".8"/><circle cx="9" cy="6" r=".8"/><circle cx="13" cy="6" r=".8"/><circle cx="17" cy="6" r=".8"/><circle cx="21" cy="6" r=".8"/>
-    <circle cx="3" cy="9" r=".8"/><circle cx="7" cy="9" r=".8"/><circle cx="11" cy="9" r=".8"/><circle cx="15" cy="9" r=".8"/><circle cx="19" cy="9" r=".8"/><circle cx="23" cy="9" r=".8"/>
-    <circle cx="5" cy="12" r=".8"/><circle cx="9" cy="12" r=".8"/><circle cx="13" cy="12" r=".8"/><circle cx="17" cy="12" r=".8"/><circle cx="21" cy="12" r=".8"/>
-    <circle cx="3" cy="15" r=".8"/><circle cx="7" cy="15" r=".8"/><circle cx="11" cy="15" r=".8"/><circle cx="15" cy="15" r=".8"/><circle cx="19" cy="15" r=".8"/><circle cx="23" cy="15" r=".8"/>
-  </g>
-</svg><span>США</span></div>
-          <div class="country-pill"><svg class="flag-svg" viewBox="0 0 60 36" aria-label="Флаг Италии" role="img">
-  <rect width="20" height="36" fill="#009246"/>
-  <rect x="20" width="20" height="36" fill="#fff"/>
-  <rect x="40" width="20" height="36" fill="#CE2B37"/>
-</svg><span>Италия</span></div>
-        </div>
+    <section class="about-section" id="about">
+      <div class="container two-lang">
+        <article class="lang-card">
+          <span class="lang-label">RU</span>
+          <h2>Сумки, которые не спорят с маршрутом</h2>
+          <p>
+            BAGGOTTS — это сумки для людей, которые ценят порядок, надёжность и свободу движения.
+            Мы делаем вещи, с которыми удобно ехать в командировку, идти по городу, брать с собой
+            технику, документы и всё то, что почему-то всегда «точно пригодится».
+          </p>
+          <p>
+            В основе — продуманная конструкция, спокойная эстетика и материалы, которые рассчитаны
+            на активное использование. Без лишней театральности. Просто хорошая сумка, которая делает своё дело.
+          </p>
+        </article>
+
+        <article class="lang-card">
+          <span class="lang-label">EN</span>
+          <h2>Bags that move with your route</h2>
+          <p>
+            BAGGOTTS creates practical bags for travel, city life and everyday movement.
+            Each piece is designed to keep your essentials organised, protected and ready for the next destination.
+          </p>
+          <p>
+            Clean shapes, durable materials and thoughtful details make BAGGOTTS a calm companion
+            for business trips, weekend escapes and daily carry.
+          </p>
+        </article>
       </div>
     </section>
 
-    <section id="product-story">
-      <div class="container product-story">
-        <div class="section-head compact">
-          <h2>Поясная сумка<br><span class="section-subtitle">Belt bag</span></h2>
-        </div>
-        <div class="lang-grid">
-          <article class="lang-card">
-            <span class="lang-label">RU</span>
-            <h3>Поясная сумка</h3>
-            <p>Сумка на пояс baggots с принтом или без — лёгкая, практичная, стильная и привлекающая внимание. Благодаря регулируемому ремню её можно носить как кросс-боди.</p>
-            <p>Объёмное основное отделение может быть разделено на две функциональные зоны, имеет карабин для ключей и закрывается на молнию. Во внешнем кармане на молнии удобно хранить мелкие вещи, маску, пластиковую карту и всё то, что обычно исчезает в карманах.</p>
-            <p>Идеальный аксессуар для долгих прогулок и путешествий.</p>
-            <ul>
-              <li><strong>Размер:</strong> примерно 300 × 150 × 70 мм</li>
-              <li><strong>Материалы:</strong> экокожа, ткань Oxford 600D, полипропилен, полиэстер</li>
-            </ul>
-          </article>
-          <article class="lang-card accent">
-            <span class="lang-label">EN</span>
-            <h3>Belt bag</h3>
-            <p>A BAGGOTS belt bag with or without prints. Lightweight and comfy, stylish and eye-catching. Thanks to the adjustable strap, it can also be worn as a crossbody.</p>
-            <p>The spacious main compartment can transform into two functional zones, has a key clip and closes with a zipper. The additional outer zipped pocket is perfect for small items, a mask, a bank card and other pocket-sized essentials.</p>
-            <p>An ideal companion for long walks and trips.</p>
-            <ul>
-              <li><strong>Dimensions:</strong> approx. 300L × 150H × 70W mm</li>
-              <li><strong>Materials:</strong> eco-leather, 600D Oxford fabric, polypropylene, polyester</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="use-cases" id="use-cases">
+    <section class="news-section" id="news">
       <div class="container">
-        <div class="section-head use-cases-head">
-          <div>
-            <span class="section-kicker">baggots in action</span>
-            <h2>Примеры использования</h2>
-          </div>
-          <p>Три входа в живые фото: британец, джинса и место для будущего героя.</p>
-        </div>
+        <h2>Новости BAGGOTTS</h2>
 
-        <div class="use-cases-grid use-cases-grid--compact">
-          <article class="use-card use-card--feature" data-use-case-id="london-mess-outdoor" tabindex="0" aria-label="Открыть примеры использования London Mess">
-            <div class="use-card__image">
-              <img src="images/outdoor/british-01.webp" alt="Поясная сумка baggots London Mess на человеке" loading="lazy" decoding="async">
-            </div>
-            <div class="use-card__content">
-              <h3>London Mess</h3>
-              <p>Первое фото — на витрине, остальные живые ракурсы внутри: кросс-боди, со спины и детали.</p>
-            </div>
-          </article>
+        <article class="news-card">
+          <div class="news-date">Скоро</div>
 
-          <article class="use-card use-card--feature" data-use-case-id="denim-pocket-outdoor" tabindex="0" aria-label="Открыть примеры использования Denim Pocket">
-            <div class="use-card__image">
-              <img src="images/outdoor/denim-01.webp" alt="Джинсовая поясная сумка baggots на человеке" loading="lazy" decoding="async">
-            </div>
-            <div class="use-card__content">
-              <h3>Denim Pocket</h3>
-              <p>Первое фото — на витрине, остальные живые ракурсы внутри: на корпусе, детали и объём.</p>
-            </div>
-          </article>
+          <h3>Фабрика BAGGOTTS готовится к переоснащению</h3>
 
-          <article class="use-card use-card--placeholder">
-            <div class="use-card__placeholder">
-              <span class="placeholder-badge">coming soon</span>
-              <h3>TEMPORARILY<br>UNDER RENOVATION</h3>
-              <p>Another bag is getting ready to steal the spotlight.</p>
-            </div>
-          </article>
-        </div>
+          <p>
+            В ближайшее время на фабрике BAGGOTTS начнётся важный этап обновления:
+            мы будем улучшать производственные процессы, оборудование и подход к созданию изделий.
+          </p>
+
+          <p>
+            Всё будет происходить максимально серьёзно: с планами, замерами, обсуждениями
+            и тем самым человеком, который смотрит на станок и говорит:
+            «Ну, тут надо подумать».
+          </p>
+
+          <p>
+            Цель простая — делать BAGGOTTS ещё надёжнее, удобнее и красивее.
+            А если получится — ещё и добиться того, чтобы каждая сумка сама понимала,
+            когда ей пора в путешествие.
+          </p>
+        </article>
       </div>
     </section>
 
-
-<section id="bags">
+    <section class="catalog-section" id="catalog">
       <div class="container">
         <div class="section-head">
-          <h2>Сумки</h2>
-          <p>Карточки можно использовать и для вещей в наличии, и для уже проданных экземпляров: продана — не беда, можно обсудить похожую G.O.A.T историю.</p>
+          <p class="eyebrow">Catalog</p>
+          <h2>Основной каталог</h2>
+          <p>Карточки можно менять в файле <code>content.js</code>: название, описание, фото, статус и порядок.</p>
         </div>
-        <div class="grid" id="bagsGrid"></div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
       </div>
     </section>
 
-    <section id="lab">
+    <section class="use-section" id="use-cases">
       <div class="container">
-        <div class="lab-card" data-open-lab tabindex="0">
-          <div>
-            <div class="eyebrow">эксперименты · материалы · странные идеи</div>
-            <h2>Goat Lab</h2>
-            <p>Козлиная лаборатория для будущих необычных сочетаний: странные ткани, переработанные материалы, заготовки, прототипы и сумки, которые сначала звучали как плохая идея.</p>
-            <div class="hero-actions">
-              <span class="btn ghost">Открыть лабораторию</span>
-            </div>
-          </div>
-          <div class="lab-visual"><img src="images/brand/logo-avatar.png" alt="Goat Lab baggots" /></div>
+        <div class="section-head">
+          <p class="eyebrow">Outdoor examples</p>
+          <h2>Примеры использования</h2>
+          <p>Здесь оставлены только outdoor-фото. Нумерация сохраняется автоматически.</p>
+        </div>
+
+        <div class="use-grid" id="useGrid"></div>
+      </div>
+    </section>
+
+    <section class="world-section" id="world">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Brand geography</p>
+          <h2>Города присутствия BAGGOTTS</h2>
+          <p>
+            Карта сделана SVG-блоком с адаптивным контейнером. На мобильных она не обрезается,
+            не уезжает в сторону и сохраняет все отметки городов внутри видимой области.
+          </p>
+        </div>
+
+        <div class="world-map-card">
+          <svg class="world-map" viewBox="0 0 1200 560" role="img" aria-labelledby="worldMapTitle worldMapDesc" preserveAspectRatio="xMidYMid meet">
+            <title id="worldMapTitle">Карта мира с городами присутствия BAGGOTTS</title>
+            <desc id="worldMapDesc">Отмечены Нью-Йорк, Палермо, Санкт-Петербург, Москва, Казань, Владивосток и Сочи.</desc>
+
+            <defs>
+              <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000000" flood-opacity="0.12"/>
+              </filter>
+            </defs>
+
+            <rect width="1200" height="560" rx="36" fill="rgba(255,255,255,.50)"/>
+
+            <g class="continents" filter="url(#softShadow)">
+              <path d="M141 213 C177 151 259 121 333 149 C367 162 374 191 351 215 C316 251 259 239 244 282 C232 318 274 340 257 379 C239 419 174 423 137 392 C93 354 91 278 141 213Z"/>
+              <path d="M342 316 C386 303 431 323 442 366 C455 414 423 469 381 497 C349 519 318 496 322 456 C328 399 282 353 342 316Z"/>
+              <path d="M507 184 C546 135 632 121 681 159 C717 188 706 228 663 237 C625 246 594 221 561 248 C521 281 468 234 507 184Z"/>
+              <path d="M564 285 C600 250 656 249 689 284 C720 317 717 381 680 426 C640 474 579 461 558 413 C539 369 529 319 564 285Z"/>
+              <path d="M693 175 C771 94 936 100 1032 159 C1107 205 1090 280 1015 286 C959 291 919 251 861 267 C806 282 773 335 720 317 C657 296 636 234 693 175Z"/>
+              <path d="M888 330 C932 299 1002 312 1030 364 C1054 408 1021 457 976 452 C943 449 938 419 900 410 C856 400 844 361 888 330Z"/>
+              <path d="M976 244 C1014 222 1064 232 1088 268 C1115 309 1089 352 1047 347 C1008 343 1005 305 971 295 C934 284 940 264 976 244Z"/>
+            </g>
+
+            <g class="routes">
+              <path d="M313 220 C455 140 643 119 820 190"/>
+              <path d="M820 190 C876 204 920 211 955 224"/>
+              <path d="M640 185 C663 205 674 221 684 243"/>
+              <path d="M695 235 C739 223 780 219 820 190"/>
+              <path d="M734 234 C809 229 894 232 955 224"/>
+            </g>
+
+            <g class="city-points">
+              <g class="city" style="--x: 313px; --y: 220px;">
+                <circle cx="313" cy="220" r="9"/>
+                <text x="327" y="214">Нью-Йорк</text>
+              </g>
+              <g class="city" style="--x: 625px; --y: 250px;">
+                <circle cx="625" cy="250" r="9"/>
+                <text x="639" y="245">Палермо</text>
+              </g>
+              <g class="city" style="--x: 668px; --y: 186px;">
+                <circle cx="668" cy="186" r="9"/>
+                <text x="682" y="181">Санкт-Петербург</text>
+              </g>
+              <g class="city" style="--x: 695px; --y: 235px;">
+                <circle cx="695" cy="235" r="9"/>
+                <text x="709" y="230">Москва</text>
+              </g>
+              <g class="city" style="--x: 735px; --y: 240px;">
+                <circle cx="735" cy="240" r="9"/>
+                <text x="749" y="254">Казань</text>
+              </g>
+              <g class="city" style="--x: 956px; --y: 225px;">
+                <circle cx="956" cy="225" r="9"/>
+                <text x="970" y="220">Владивосток</text>
+              </g>
+              <g class="city" style="--x: 684px; --y: 267px;">
+                <circle cx="684" cy="267" r="9"/>
+                <text x="698" y="282">Сочи</text>
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
 
-    <section id="contacts">
-      <div class="container contact-panel">
-        <div>
-          <h2>Выбрал сумку? Пиши.</h2>
-          <p>Пока главный заказ можно вести через VK или Instagram. MAX и Threads уже предусмотрены в структуре сайта — когда заведёшь, просто добавим ссылки.</p>
-        </div>
-        <div class="socials">
-          <a class="btn primary" href="https://vk.com/baggots" target="_blank" rel="noopener">Написать / смотреть VK</a>
-          <a class="btn ghost" href="https://www.instagram.com/baggots_shop/" target="_blank" rel="noopener">Instagram</a>
-          <a class="btn disabled" href="#" aria-disabled="true">MAX скоро</a>
-          <a class="btn disabled" href="#" aria-disabled="true">Threads скоро</a>
-        </div>
+    <section class="contacts-section" id="contacts">
+      <div class="container contacts-card">
+        <p class="eyebrow">Contacts</p>
+        <h2>BAGGOTTS</h2>
+        <p>Для каталога, партнёрства и поставок: <a href="mailto:hello@baggotts.example">hello@baggotts.example</a></p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">© baggots · поясные сумки ручной работы · G.O.A.T магия была здесь</div>
+  <footer class="site-footer">
+    <span>© BAGGOTTS</span>
+    <span>Made for movement</span>
   </footer>
 
-  <div class="modal" id="bagModal" aria-hidden="true">
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="close" id="closeModal" type="button" aria-label="Закрыть">×</button>
-      <div class="modal-inner">
-        <div>
-          <div class="main-modal-photo">
-            <img id="modalMainPhoto" src="" alt="" />
-          </div>
-          <div class="thumbs" id="modalThumbs"></div>
-        </div>
-        <div class="modal-copy">
-          <span class="status" id="modalStatus"></span>
-          <h2 id="modalTitle"></h2>
-          <p class="description" id="modalDescription"></p>
-          <div class="specs">
-            <div class="spec"><span>Цена</span><span id="modalPrice"></span></div>
-            <div class="spec"><span>Материалы</span><span id="modalMaterials"></span></div>
-            <div class="spec"><span>Размер</span><span id="modalSize"></span></div>
-            <div class="spec"><span>Экземпляр</span><span>уникальный</span></div>
-          </div>
-          <div class="modal-actions">
-            <a class="btn primary" href="https://vk.com/baggots" target="_blank" rel="noopener">Написать в VK</a>
-            <a class="btn ghost" href="https://www.instagram.com/baggots_shop/" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn disabled" href="#" aria-disabled="true">MAX скоро</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
