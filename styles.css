@@ -999,23 +999,65 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
   color: var(--red);
 }
 
-/* ===== BAGGOTTS PATCH v2: новости со скроллом после RU/EN описания ===== */
+/* ===== BAGGOTTS PATCH v3: вернуть шрифт, новости со скроллом, карта без белой пелены ===== */
+
+/* Базовый шрифт: возвращаем мягкий стиль сайта вместо браузерного serif */
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* Карта: не белая подложка, а полупрозрачная карта поверх фирменного фона */
+.site-world-map {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("images/world-map-presence.png");
+  background-repeat: no-repeat;
+  background-position: center clamp(92px, 11vw, 136px);
+  background-size: min(1240px, 98vw) auto;
+  background-color: transparent !important;
+  opacity: 0.46;
+  mix-blend-mode: multiply;
+  filter: contrast(1.18) saturate(1.06);
+  overflow: visible;
+}
+
+/* Новости: компактная область со своим скроллом */
 .news-section {
-  padding: 44px 0 54px;
+  padding: 38px 0 48px;
 }
 
 .news-head {
   align-items: end;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+}
+
+.news-shell {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 8% 12%, rgba(223,55,45,.10), transparent 24%),
+    radial-gradient(circle at 92% 10%, rgba(17,118,201,.10), transparent 26%),
+    rgba(255,250,242,.90);
+  box-shadow: 0 12px 30px rgba(30,30,30,.07);
+  overflow: hidden;
 }
 
 .news-scroll {
-  max-height: 430px;
+  height: 245px;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 0 10px 0 0;
+  padding: 22px 26px;
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
-  scrollbar-color: rgba(223, 55, 45, .7) rgba(222, 214, 201, .55);
+  scrollbar-color: rgba(223, 55, 45, .74) rgba(222, 214, 201, .62);
 }
 
 .news-scroll::-webkit-scrollbar {
@@ -1023,36 +1065,26 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
 }
 
 .news-scroll::-webkit-scrollbar-track {
-  background: rgba(222, 214, 201, .55);
+  background: rgba(222, 214, 201, .62);
   border-radius: 999px;
 }
 
 .news-scroll::-webkit-scrollbar-thumb {
-  background: rgba(223, 55, 45, .72);
+  background: rgba(223, 55, 45, .78);
   border-radius: 999px;
 }
 
-.news-item {
-  position: relative;
-  padding: 28px 30px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background:
-    radial-gradient(circle at 12% 12%, rgba(223,55,45,.12), transparent 24%),
-    radial-gradient(circle at 92% 8%, rgba(17,118,201,.10), transparent 26%),
-    rgba(255,250,242,.96);
-  box-shadow: 0 12px 30px rgba(30,30,30,.07);
-}
-
 .news-item + .news-item {
-  margin-top: 16px;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
 }
 
 .news-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .news-meta time,
@@ -1060,10 +1092,10 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
-  padding: 0 14px;
+  min-height: 32px;
+  padding: 0 13px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -1080,22 +1112,22 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
 }
 
 .news-item h3 {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   color: var(--blue);
   font-family: "Montserrat Alternates", "Nunito Sans", Arial, sans-serif;
-  font-size: clamp(30px, 3.8vw, 46px);
+  font-size: clamp(26px, 3.1vw, 38px);
   line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.045em;
 }
 
 .news-item p {
-  max-width: 920px;
-  margin: 0 0 12px;
+  max-width: 980px;
+  margin: 0 0 10px;
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.62;
-  font-weight: 650;
+  font-size: 17px;
+  line-height: 1.56;
+  font-weight: 700;
 }
 
 .news-item p:last-child {
@@ -1103,47 +1135,46 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
 }
 
 /*
-  Чтобы добавить новую новость:
-  1) скопировать <article class="news-item">...</article>;
-  2) вставить её первой внутри <div class="news-scroll">;
-  3) поменять дату, метку, заголовок и текст.
-  Высота раздела не раздуется: новые записи будут прокручиваться внутри .news-scroll.
+  Как добавить новую новость:
+  - в index.html найти <div class="news-scroll">;
+  - скопировать целиком <article class="news-item">...</article>;
+  - вставить копию первой внутри .news-scroll;
+  - поменять дату, метку, заголовок и текст.
+  Блок останется той же высоты, старые новости будут прокручиваться внутри.
 */
-
-/* ===== BAGGOTTS PATCH v2: карта городов заметнее и без обрезания на мобильных ===== */
-.site-world-map {
-  background-position: center clamp(96px, 12vw, 140px);
-  background-size: min(1180px, 96vw) auto;
-  background-origin: border-box;
-  overflow: visible;
-  opacity: 0.24;
-}
 
 @media (max-width: 900px) {
   .site-world-map {
-    background-position: center 124px;
-    background-size: 112vw auto;
-    opacity: 0.22;
+    background-position: center 110px;
+    background-size: 120vw auto;
+    opacity: 0.42;
   }
 }
 
 @media (max-width: 620px) {
+  body {
+    font-weight: 700;
+  }
+
   .news-section {
-    padding: 40px 0 46px;
+    padding: 34px 0 42px;
   }
 
   .news-head {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .news-scroll {
-    max-height: 360px;
-    padding-right: 6px;
+    height: 285px;
+    padding: 20px 18px;
   }
 
-  .news-item {
-    padding: 22px;
+  .news-shell {
     border-radius: 22px;
+  }
+
+  .news-item h3 {
+    font-size: 25px;
   }
 
   .news-item p {
@@ -1151,20 +1182,19 @@ footer { padding: 30px 0 46px; color: var(--muted); font-size: 14px; }
   }
 
   .site-world-map {
-    position: absolute;
+    position: fixed;
     inset: 0;
-    min-height: 100%;
-    background-position: center 96px;
-    background-size: 138vw auto;
-    opacity: 0.20;
+    background-position: center 90px;
+    background-size: 152vw auto;
+    opacity: 0.38;
   }
 }
 
 @media (max-width: 430px) {
   .site-world-map {
-    background-position: center 90px;
-    background-size: 154vw auto;
-    opacity: 0.20;
+    background-position: center 84px;
+    background-size: 168vw auto;
+    opacity: 0.36;
   }
 }
 
