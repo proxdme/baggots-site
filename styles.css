@@ -1022,9 +1022,9 @@ body {
   background-position: center clamp(92px, 11vw, 136px);
   background-size: min(1240px, 98vw) auto;
   background-color: transparent !important;
-  opacity: 0.46;
+  opacity: 0.60;
   mix-blend-mode: multiply;
-  filter: contrast(1.18) saturate(1.06);
+  filter: contrast(1.32) saturate(1.08);
   overflow: visible;
 }
 
@@ -1147,7 +1147,7 @@ body {
   .site-world-map {
     background-position: center 110px;
     background-size: 120vw auto;
-    opacity: 0.42;
+    opacity: 0.56;
   }
 }
 
@@ -1186,7 +1186,7 @@ body {
     inset: 0;
     background-position: center 90px;
     background-size: 152vw auto;
-    opacity: 0.38;
+    opacity: 0.52;
   }
 }
 
@@ -1194,7 +1194,7 @@ body {
   .site-world-map {
     background-position: center 84px;
     background-size: 168vw auto;
-    opacity: 0.36;
+    opacity: 0.50;
   }
 }
 
