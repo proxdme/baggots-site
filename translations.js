@@ -23,8 +23,8 @@ window.BAGGOTS_I18N = {
     travel: {
       label: "Где уже гуляют baggots",
       title: "Где уже гуляют baggots",
-      text: "Наши сумки уже нашли счастливых владельцев в Австралии, США и Италии. Присоединяйся.",
-      australia: "Австралия", usa: "США", italy: "Италия"
+      text: "Наши сумки уже нашли счастливых владельцев в Австралии, США, Италии, России и Бразилии. Присоединяйся.",
+      australia: "Австралия", usa: "США", italy: "Италия", russia: "Россия", brazil: "Бразилия"
     },
     product: {
       heading: 'Поясная сумка<br><span class="section-subtitle">Belt bag</span>',
@@ -116,8 +116,8 @@ window.BAGGOTS_I18N = {
     travel: {
       label: "Where baggots are already roaming",
       title: "Where baggots are already roaming",
-      text: "Our bags have already found happy humans in Australia, the United States and Italy. Join the herd.",
-      australia: "Australia", usa: "USA", italy: "Italy"
+      text: "Our bags have already found happy humans in Australia, the United States, Italy, Russia and Brazil. Join the herd.",
+      australia: "Australia", usa: "USA", italy: "Italy", russia: "Russia", brazil: "Brazil"
     },
     product: {
       heading: 'Belt bag<br><span class="section-subtitle">Поясная сумка</span>',
