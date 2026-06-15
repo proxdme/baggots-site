@@ -1198,3 +1198,72 @@ body {
   }
 }
 
+/* ===== 12052026: RU / EN language switcher ===== */
+.nav {
+  flex-wrap: wrap;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,250,242,.82);
+}
+
+.language-button {
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+
+.language-button:hover {
+  transform: translateY(-1px);
+}
+
+.language-button.active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.lang-card[hidden] {
+  display: none !important;
+}
+
+.lang-grid:has(.lang-card[hidden]) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.lang-grid:has(.lang-card[hidden]) .lang-card:not([hidden]) {
+  max-width: 860px;
+}
+
+@media (max-width: 980px) {
+  .language-switcher {
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 620px) {
+  .language-switcher {
+    align-self: flex-start;
+  }
+
+  .language-button {
+    min-width: 42px;
+    min-height: 34px;
+  }
+}
+

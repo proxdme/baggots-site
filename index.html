@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>baggots — поясные сумки с G.O.A.T характером</title>
-  <meta name="description" content="baggots — поясные сумки ручной работы с G.O.A.T характером. Лёгкие, практичные, заметные и не скучные." />
+  <title>baggots</title>
+  <meta name="description" id="metaDescription" content="" />
   <link rel="icon" href="images/brand/logo-avatar.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,32 +19,31 @@
       <a class="brand" href="#top" aria-label="baggots">
         <img class="brand-logo" src="images/brand/logo-header.svg" alt="baggots" />
       </a>
-      <nav class="nav-links" aria-label="Навигация">
-        <a href="#bags">Сумки</a>
+      <nav class="nav-links" aria-label="Навигация" data-i18n-aria="nav.label">
+        <a href="#bags" data-i18n="nav.bags">Сумки</a>
         <a href="#lab">Goat Lab</a>
-        <a href="#about">О бренде</a>
-        <a href="#product-story">Описание</a>
-        <a href="#news">Новости</a>
+        <a href="#about" data-i18n="nav.about">О бренде</a>
+        <a href="#product-story" data-i18n="nav.description">Описание</a>
+        <a href="#news" data-i18n="nav.news">Новости</a>
         <a href="https://vk.com/baggots" target="_blank" rel="noopener">VK</a>
         <a href="https://www.instagram.com/baggots_shop/" target="_blank" rel="noopener">Instagram</a>
-        <a href="#contacts">Контакты</a>
+        <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
       </nav>
+      <div class="language-switcher" role="group" aria-label="Language">
+        <button class="language-button" type="button" data-language="ru">RU</button>
+        <button class="language-button" type="button" data-language="en">EN</button>
+      </div>
     </div>
   </header>
 
   <main id="top">
     <section class="container hero">
       <div class="hero-copy">
-        <h1>Поясные сумки с <span>G.O.A.T</span> характером</h1>
-        <p class="lead">
-          baggots — поясные сумки с принтом или без: лёгкие, практичные и заметные.
-          Надёжный спутник ваших приключений. Большой тяжёлый портфель уже никому не нужен —
-          небольшая, но стильная сумка baggots поможет держать всё нужное под рукой.
-          Немного криво, зато живое. Не конвейер, а G.O.A.T магия.
-        </p>
+        <h1 data-i18n-html="hero.title">Поясные сумки с <span>G.O.A.T</span> характером</h1>
+        <p class="lead" data-i18n="hero.lead"></p>
         <div class="hero-actions">
-          <a class="btn primary" href="#bags">Смотреть сумки</a>
-          <a class="btn red disabled" href="#contacts" aria-disabled="true">MAX скоро</a>
+          <a class="btn primary" href="#bags" data-i18n="hero.viewBags">Смотреть сумки</a>
+          <a class="btn red disabled" href="#contacts" aria-disabled="true" data-i18n="common.maxSoon">MAX скоро</a>
           <a class="btn ghost" href="https://vk.com/baggots" target="_blank" rel="noopener">VK</a>
         </div>
       </div>
@@ -53,37 +52,37 @@
         <div class="hero-stage">
           <img id="heroCarouselImage" src="images/red-zip-1.webp" alt="Поясная сумка baggots" fetchpriority="high" decoding="async" />
         </div>
-        <div class="sticker">Каждая сумка — отдельный шалун. Повторить можно настроение, но не копию.</div>
+        <div class="sticker" data-i18n="hero.sticker">Каждая сумка — отдельный шалун. Повторить можно настроение, но не копию.</div>
       </div>
     </section>
 
     <section id="about">
       <div class="container about">
         <div class="about-card big">
-          <h3>Не фабрика. Не партия.</h3>
+          <h3 data-i18n="about.leftTitle">Не фабрика. Не партия.</h3>
           <div class="about-text">
-            <p>Шьём вручную из разных тканей, денима, упаковок и всего, что просится стать сумкой. Даём материалам вторую жизнь и превращаем их в удобные, заметные вещи с характером.</p>
-            <p>Каждая — не тираж, а отдельная история. Можно носить на поясе или как кросс-боди.</p>
+            <p data-i18n="about.leftP1"></p>
+            <p data-i18n="about.leftP2"></p>
           </div>
         </div>
 
         <div class="about-card about-card-right">
-          <h3>Не скучно.<br>Зато живое.</h3>
+          <h3 data-i18n-html="about.rightTitle">Не скучно.<br>Зато живое.</h3>
           <div class="about-text about-text-lower">
-            <p>Яркие цвета, принты, нашивки и странные — в хорошем смысле — детали. Мы не гонимся за идеалом: делаем сумки, которые хочется носить и которые выделяют вас из стада.</p>
-            <p>Поэтому baggots не выглядят как бездушный поток с конвейера — у каждой сумки свой вайб и своё настроение.</p>
+            <p data-i18n="about.rightP1"></p>
+            <p data-i18n="about.rightP2"></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="travel-strip" aria-label="Где уже гуляют baggots">
+    <section class="travel-strip" aria-label="Где уже гуляют baggots" data-i18n-aria="travel.label">
       <div class="container travel-inner">
         <div class="travel-copy">
           <div class="travel-icon">⌁</div>
           <div>
-            <h2>Где уже гуляют baggots</h2>
-            <p>Наши сумки уже нашли счастливых владельцев в Австралии, США и Италии. Присоединяйся.</p>
+            <h2 data-i18n="travel.title">Где уже гуляют baggots</h2>
+            <p data-i18n="travel.text"></p>
           </div>
         </div>
         <div class="travel-flags" aria-label="страны, где уже есть baggots">
@@ -102,7 +101,7 @@
     <polygon points="48,30 48.7,32 50.8,32 49.1,33.2 49.8,35.2 48,34 46.2,35.2 46.9,33.2 45.2,32 47.3,32"/>
     <polygon points="32,27 32.7,29 34.8,29 33.1,30.2 33.8,32.2 32,31 30.2,32.2 30.9,30.2 29.2,29 31.3,29"/>
   </g>
-</svg><span>Австралия</span></div>
+</svg><span data-i18n="travel.australia">Австралия</span></div>
           <div class="country-pill"><svg class="flag-svg" viewBox="0 0 60 36" aria-label="Флаг США" role="img">
   <rect width="60" height="36" fill="#fff"/>
   <g fill="#B22234">
@@ -116,12 +115,12 @@
     <circle cx="5" cy="12" r=".8"/><circle cx="9" cy="12" r=".8"/><circle cx="13" cy="12" r=".8"/><circle cx="17" cy="12" r=".8"/><circle cx="21" cy="12" r=".8"/>
     <circle cx="3" cy="15" r=".8"/><circle cx="7" cy="15" r=".8"/><circle cx="11" cy="15" r=".8"/><circle cx="15" cy="15" r=".8"/><circle cx="19" cy="15" r=".8"/><circle cx="23" cy="15" r=".8"/>
   </g>
-</svg><span>США</span></div>
+</svg><span data-i18n="travel.usa">США</span></div>
           <div class="country-pill"><svg class="flag-svg" viewBox="0 0 60 36" aria-label="Флаг Италии" role="img">
   <rect width="20" height="36" fill="#009246"/>
   <rect x="20" width="20" height="36" fill="#fff"/>
   <rect x="40" width="20" height="36" fill="#CE2B37"/>
-</svg><span>Италия</span></div>
+</svg><span data-i18n="travel.italy">Италия</span></div>
         </div>
       </div>
     </section>
@@ -129,29 +128,29 @@
     <section id="product-story">
       <div class="container product-story">
         <div class="section-head compact">
-          <h2>Поясная сумка<br><span class="section-subtitle">Belt bag</span></h2>
+          <h2 data-i18n-html="product.heading">Поясная сумка<br><span class="section-subtitle">Belt bag</span></h2>
         </div>
         <div class="lang-grid">
-          <article class="lang-card">
+          <article class="lang-card" data-lang-card="ru">
             <span class="lang-label">RU</span>
-            <h3>Поясная сумка</h3>
-            <p>Сумка на пояс baggots с принтом или без — лёгкая, практичная, стильная и привлекающая внимание. Благодаря регулируемому ремню её можно носить как кросс-боди.</p>
-            <p>Объёмное основное отделение может быть разделено на две функциональные зоны, имеет карабин для ключей и закрывается на молнию. Во внешнем кармане на молнии удобно хранить мелкие вещи, маску, пластиковую карту и всё то, что обычно исчезает в карманах.</p>
-            <p>Идеальный аксессуар для долгих прогулок и путешествий.</p>
+            <h3 data-i18n="product.ruTitle">Поясная сумка</h3>
+            <p data-i18n="product.ruP1"></p>
+            <p data-i18n="product.ruP2"></p>
+            <p data-i18n="product.ruP3"></p>
             <ul>
-              <li><strong>Размер:</strong> примерно 300 × 150 × 70 мм</li>
-              <li><strong>Материалы:</strong> экокожа, ткань Oxford 600D, полипропилен, полиэстер</li>
+              <li data-i18n-html="product.ruSize"></li>
+              <li data-i18n-html="product.ruMaterials"></li>
             </ul>
           </article>
-          <article class="lang-card accent">
+          <article class="lang-card accent" data-lang-card="en">
             <span class="lang-label">EN</span>
-            <h3>Belt bag</h3>
-            <p>A BAGGOTS belt bag with or without prints. Lightweight and comfy, stylish and eye-catching. Thanks to the adjustable strap, it can also be worn as a crossbody.</p>
-            <p>The spacious main compartment can transform into two functional zones, has a key clip and closes with a zipper. The additional outer zipped pocket is perfect for small items, a mask, a bank card and other pocket-sized essentials.</p>
-            <p>An ideal companion for long walks and trips.</p>
+            <h3 data-i18n="product.enTitle">Belt bag</h3>
+            <p data-i18n="product.enP1"></p>
+            <p data-i18n="product.enP2"></p>
+            <p data-i18n="product.enP3"></p>
             <ul>
-              <li><strong>Dimensions:</strong> approx. 300L × 150H × 70W mm</li>
-              <li><strong>Materials:</strong> eco-leather, 600D Oxford fabric, polypropylene, polyester</li>
+              <li data-i18n-html="product.enSize"></li>
+              <li data-i18n-html="product.enMaterials"></li>
             </ul>
           </article>
         </div>
@@ -163,74 +162,45 @@
         <div class="section-head news-head">
           <div>
             <span class="section-kicker">baggots news</span>
-            <h2>Новости</h2>
+            <h2 data-i18n="news.title">Новости</h2>
           </div>
-          <p>Короткие новости бренда. Новые записи добавляются сверху, старые остаются внутри блока.</p>
+          <p data-i18n="news.intro"></p>
         </div>
 
         <div class="news-shell">
-          <div class="news-scroll" aria-label="Новости baggots">
+          <div class="news-scroll" aria-label="Новости baggots" data-i18n-aria="news.aria">
 
             <article class="news-item">
               <div class="news-meta">
                 <time datetime="2026-06-15">15.06.2026</time>
-                <span>мундиаль</span>
+                <span data-i18n="news.worldCupTag">мундиаль</span>
               </div>
-              <h3>baggots готовит коллекцию, вдохновлённую сборной Бразилии</h3>
-              <p>
-                baggots приступил к производству эксклюзивной коллекции,
-                вдохновлённой игрой сборной Бразилии.
-              </p>
-              <p>
-                В программе — яркие сочетания, футбольное настроение и немного той самой магии,
-                после которой обычная прогулка начинает подозрительно напоминать выход на финал.
-              </p>
-              <p>
-                Подробности покажем позже. Пока можно начинать тренировать фирменное
-                «го-о-ол» перед зеркалом.
-              </p>
+              <h3 data-i18n="news.worldCupTitle"></h3>
+              <p data-i18n="news.worldCupP1"></p>
+              <p data-i18n="news.worldCupP2"></p>
+              <p data-i18n="news.worldCupP3"></p>
             </article>
 
             <article class="news-item">
               <div class="news-meta">
                 <time datetime="2026-06-01">01.06.2026</time>
-                <span>производство</span>
+                <span data-i18n="news.productionTag">производство</span>
               </div>
-              <h3>baggots запустил новую производственную линию</h3>
-              <p>
-                Производство baggots стало шире: мы запустили новую линию,
-                чтобы быстрее превращать хорошие идеи в сумки.
-              </p>
-              <p>
-                Теперь миллионы преданных почитателей бренда смогут получать свои baggots ещё быстрее.
-                Число «миллионы» подтверждено внутренним отделом оптимизма и одним очень уверенным козликом.
-              </p>
-              <p>
-                Качество, ручной характер и фирменная лёгкая кривизна остаются на месте.
-                Быстрее — не значит скучнее.
-              </p>
+              <h3 data-i18n="news.productionTitle"></h3>
+              <p data-i18n="news.productionP1"></p>
+              <p data-i18n="news.productionP2"></p>
+              <p data-i18n="news.productionP3"></p>
             </article>
 
             <article class="news-item">
               <div class="news-meta">
                 <time datetime="2026-05-12">12.05.2026</time>
-                <span>фабрика</span>
+                <span data-i18n="news.factoryTag">фабрика</span>
               </div>
-              <h3>Фабрика baggots готовится к переоснащению</h3>
-              <p>
-                В ближайшее время на фабрике baggots начнётся важный этап обновления:
-                мы будем улучшать производственные процессы, оборудование и подход к созданию изделий.
-              </p>
-              <p>
-                Всё будет происходить максимально серьёзно: с планами, замерами, обсуждениями
-                и тем самым человеком, который смотрит на станок и говорит:
-                «Ну, тут надо подумать».
-              </p>
-              <p>
-                Цель простая — делать baggots ещё надёжнее, удобнее и красивее.
-                А если получится — ещё и добиться того, чтобы каждая сумка сама понимала,
-                когда ей пора в путешествие.
-              </p>
+              <h3 data-i18n="news.factoryTitle"></h3>
+              <p data-i18n="news.factoryP1"></p>
+              <p data-i18n="news.factoryP2"></p>
+              <p data-i18n="news.factoryP3"></p>
             </article>
 
           </div>
@@ -243,9 +213,9 @@
         <div class="section-head use-cases-head">
           <div>
             <span class="section-kicker">baggots in action</span>
-            <h2>Примеры использования</h2>
+            <h2 data-i18n="useCases.title">Примеры использования</h2>
           </div>
-          <p>Три входа в живые фото: британец, джинса и место для будущего героя.</p>
+          <p data-i18n="useCases.intro"></p>
         </div>
 
         <div class="use-cases-grid use-cases-grid--compact">
@@ -255,7 +225,7 @@
             </div>
             <div class="use-card__content">
               <h3>London Mess</h3>
-              <p>Первое фото — на витрине, остальные живые ракурсы внутри: кросс-боди, со спины и детали.</p>
+              <p data-i18n="useCases.londonText"></p>
             </div>
           </article>
 
@@ -265,7 +235,7 @@
             </div>
             <div class="use-card__content">
               <h3>Denim Pocket</h3>
-              <p>Первое фото — на витрине, остальные живые ракурсы внутри: на корпусе, детали и объём.</p>
+              <p data-i18n="useCases.denimText"></p>
             </div>
           </article>
 
@@ -284,8 +254,8 @@
 <section id="bags">
       <div class="container">
         <div class="section-head">
-          <h2>Сумки</h2>
-          <p>Карточки можно использовать и для вещей в наличии, и для уже проданных экземпляров: продана — не беда, можно обсудить похожую G.O.A.T историю.</p>
+          <h2 data-i18n="bags.title">Сумки</h2>
+          <p data-i18n="bags.intro"></p>
         </div>
         <div class="grid" id="bagsGrid"></div>
       </div>
@@ -295,11 +265,11 @@
       <div class="container">
         <div class="lab-card" data-open-lab tabindex="0">
           <div>
-            <div class="eyebrow">эксперименты · материалы · странные идеи</div>
+            <div class="eyebrow" data-i18n="lab.eyebrow"></div>
             <h2>Goat Lab</h2>
-            <p>Козлиная лаборатория для будущих необычных сочетаний: странные ткани, переработанные материалы, заготовки, прототипы и сумки, которые сначала звучали как плохая идея.</p>
+            <p data-i18n="lab.text"></p>
             <div class="hero-actions">
-              <span class="btn ghost">Открыть лабораторию</span>
+              <span class="btn ghost" data-i18n="lab.open">Открыть лабораторию</span>
             </div>
           </div>
           <div class="lab-visual"><img src="images/brand/logo-avatar.png" alt="Goat Lab baggots" /></div>
@@ -310,26 +280,26 @@
     <section id="contacts">
       <div class="container contact-panel">
         <div>
-          <h2>Выбрал сумку? Пиши.</h2>
-          <p>Пока главный заказ можно вести через VK или Instagram. MAX и Threads уже предусмотрены в структуре сайта — когда заведёшь, просто добавим ссылки.</p>
+          <h2 data-i18n="contacts.title">Выбрал сумку? Пиши.</h2>
+          <p data-i18n="contacts.text"></p>
         </div>
         <div class="socials">
-          <a class="btn primary" href="https://vk.com/baggots" target="_blank" rel="noopener">Написать / смотреть VK</a>
+          <a class="btn primary" href="https://vk.com/baggots" target="_blank" rel="noopener" data-i18n="contacts.vk">Написать / смотреть VK</a>
           <a class="btn ghost" href="https://www.instagram.com/baggots_shop/" target="_blank" rel="noopener">Instagram</a>
-          <a class="btn disabled" href="#" aria-disabled="true">MAX скоро</a>
-          <a class="btn disabled" href="#" aria-disabled="true">Threads скоро</a>
+          <a class="btn disabled" href="#" aria-disabled="true" data-i18n="common.maxSoon">MAX скоро</a>
+          <a class="btn disabled" href="#" aria-disabled="true" data-i18n="common.threadsSoon">Threads скоро</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© baggots · поясные сумки ручной работы · G.O.A.T магия была здесь</div>
+    <div class="container" data-i18n="footer.text">© baggots · поясные сумки ручной работы · G.O.A.T магия была здесь</div>
   </footer>
 
   <div class="modal" id="bagModal" aria-hidden="true">
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="close" id="closeModal" type="button" aria-label="Закрыть">×</button>
+      <button class="close" id="closeModal" type="button" aria-label="Закрыть" data-i18n-aria="modal.close">×</button>
       <div class="modal-inner">
         <div>
           <div class="main-modal-photo">
@@ -342,21 +312,22 @@
           <h2 id="modalTitle"></h2>
           <p class="description" id="modalDescription"></p>
           <div class="specs">
-            <div class="spec"><span>Цена</span><span id="modalPrice"></span></div>
-            <div class="spec"><span>Материалы</span><span id="modalMaterials"></span></div>
-            <div class="spec"><span>Размер</span><span id="modalSize"></span></div>
-            <div class="spec"><span>Экземпляр</span><span>уникальный</span></div>
+            <div class="spec"><span data-i18n="modal.price">Цена</span><span id="modalPrice"></span></div>
+            <div class="spec"><span data-i18n="modal.materials">Материалы</span><span id="modalMaterials"></span></div>
+            <div class="spec"><span data-i18n="modal.size">Размер</span><span id="modalSize"></span></div>
+            <div class="spec"><span data-i18n="modal.piece">Экземпляр</span><span data-i18n="modal.unique">уникальный</span></div>
           </div>
           <div class="modal-actions">
-            <a class="btn primary" href="https://vk.com/baggots" target="_blank" rel="noopener">Написать в VK</a>
+            <a class="btn primary" href="https://vk.com/baggots" target="_blank" rel="noopener" data-i18n="modal.writeVk">Написать в VK</a>
             <a class="btn ghost" href="https://www.instagram.com/baggots_shop/" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn disabled" href="#" aria-disabled="true">MAX скоро</a>
+            <a class="btn disabled" href="#" aria-disabled="true" data-i18n="common.maxSoon">MAX скоро</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
