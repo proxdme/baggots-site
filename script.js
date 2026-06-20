@@ -184,18 +184,22 @@ const useCases = [
 ];
 
 const lab = {
-  id: "goat-lab", title: "Goat Lab",
+  id: "snake-bite", title: "Snake Bite",
   ru: {
-    status: "эксперимент", price: "не продаётся напрямую",
-    description: "Здесь будут появляться экспериментальные сумки: странные сочетания тканей, неожиданные молнии, переработанные материалы, заготовки, прототипы и идеи, которые сначала казались сомнительными.",
-    materials: "всё, что просится стать сумкой", size: "зависит от эксперимента"
+    status: "prototype",
+    price: "прототип Goat Lab",
+    description: "Экспериментальная поясная сумка с фактурой под змеиную кожу, яркими жёлтыми молниями и контрастным ремнём. Заметная, цепкая и совсем не из тех вещей, которые тихо лежат в углу. Подходит для города, прогулок и случаев, когда хочется взять с собой только нужное — но сделать это с характером.",
+    materials: "текстиль с принтом под змеиную кожу, молнии, стропа и фурнитура",
+    size: "размер прототипа уточняется"
   },
   en: {
-    status: "experiment", price: "not sold directly",
-    description: "This is where experimental bags appear: strange fabric combinations, unexpected zippers, reclaimed materials, prototypes and ideas that initially sounded highly questionable.",
-    materials: "anything that clearly wants to become a bag", size: "depends on the experiment"
+    status: "prototype",
+    price: "Goat Lab prototype",
+    description: "An experimental belt bag with a faux snake-skin texture, bright yellow zippers and a bold contrast strap. Sharp, eye-catching and absolutely not the kind of piece that quietly blends into the background. Made for city walks, everyday carry and moments when you want the essentials close — with a little attitude.",
+    materials: "snake-effect printed textile, zippers, webbing and hardware",
+    size: "prototype dimensions to be confirmed"
   },
-  photos: ["images/goat-lab-1.svg", "images/goat-lab-2.svg", "images/goat-lab-3.svg", "images/goat-lab-4.svg", "images/goat-lab-5.svg"]
+  photos: ["images/snake-bite-1.png", "images/snake-bite-2.png"]
 };
 
 let currentLanguage = "ru";

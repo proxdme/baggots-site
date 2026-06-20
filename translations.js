@@ -74,7 +74,9 @@ window.BAGGOTS_I18N = {
     lab: {
       eyebrow: "эксперименты · материалы · странные идеи",
       text: "Козлиная лаборатория для будущих необычных сочетаний: странные ткани, переработанные материалы, заготовки, прототипы и сумки, которые сначала звучали как плохая идея.",
-      open: "Открыть лабораторию"
+      open: "Открыть лабораторию",
+      snakeShort: "Первая сумка Goat Lab: snake-фактура, яркие жёлтые акценты и характер, который кусается.",
+      openPrototype: "Открыть prototype"
     },
     contacts: {
       title: "Выбрал сумку? Пиши.",
@@ -167,7 +169,9 @@ window.BAGGOTS_I18N = {
     lab: {
       eyebrow: "experiments · materials · questionable ideas",
       text: "The goat-powered laboratory for unusual combinations: strange fabrics, reclaimed materials, prototypes and bags that initially sounded like a terrible idea.",
-      open: "Open the laboratory"
+      open: "Open the laboratory",
+      snakeShort: "The first Goat Lab bag: snake texture, bright yellow accents and a personality with a bite.",
+      openPrototype: "Open prototype"
     },
     contacts: {
       title: "Found your bag? Say hello.",
