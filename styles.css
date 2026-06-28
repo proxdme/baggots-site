@@ -1247,7 +1247,8 @@ body {
 }
 
 .lang-grid:has(.lang-card[hidden]) .lang-card:not([hidden]) {
-  max-width: 860px;
+  width: 100%;
+  max-width: none;
 }
 
 @media (max-width: 980px) {
