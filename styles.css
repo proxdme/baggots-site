@@ -1318,3 +1318,32 @@ body {
   }
 }
 
+/* ===== 12052026: hero carousel compact v2 ===== */
+.hero-visual {
+  transform: scale(.82);
+  transform-origin: center right;
+}
+
+.hero-card {
+  padding: 22px;
+}
+
+.hero-image-frame {
+  max-width: 520px;
+  margin-left: auto;
+}
+
+.hero-image-frame img {
+  object-fit: contain;
+}
+
+@media (max-width: 980px) {
+  .hero-visual {
+    transform: none;
+  }
+
+  .hero-image-frame {
+    max-width: 100%;
+  }
+}
+

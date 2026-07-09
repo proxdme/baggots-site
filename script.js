@@ -2,7 +2,7 @@ const contacts = {
   vk: "https://vk.com/baggots",
   instagram: "https://www.instagram.com/baggots_shop/",
   max: "#",
-  threads: "#"
+  threads: "https://www.threads.com/@baggots_shop"
 };
 
 const bags = [
@@ -358,7 +358,10 @@ function setLanguage(language, save = true) {
 
 function startHeroCarousel() {
   if (!heroCarouselImage) return;
-  const gallery = bags.map((bag) => ({ src: bag.photos[0], title: bag.title }));
+  const gallery = [
+    ...bags.map((bag) => ({ src: bag.photos[0], title: bag.title })),
+    ...lab.photos.map((photo, index) => ({ src: photo, title: index === 0 ? lab.title : `${lab.title} ${index + 1}` }))
+  ];
   let current = 0;
 
   setInterval(() => {

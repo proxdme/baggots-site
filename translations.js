@@ -80,7 +80,7 @@ window.BAGGOTS_I18N = {
     },
     contacts: {
       title: "Выбрал сумку? Пиши.",
-      text: "Пока главный заказ можно вести через VK или Instagram. MAX и Threads уже предусмотрены в структуре сайта — когда заведёшь, просто добавим ссылки.",
+      text: "Пока главный заказ можно вести через VK, Instagram или Threads. MAX уже предусмотрен в структуре сайта — когда заведёшь, просто добавим ссылку.",
       vk: "Написать / смотреть VK"
     },
     footer: { text: "© baggots · поясные сумки ручной работы · G.O.A.T магия была здесь" },
@@ -175,7 +175,7 @@ window.BAGGOTS_I18N = {
     },
     contacts: {
       title: "Found your bag? Say hello.",
-      text: "For now, orders and questions live in VK or Instagram. MAX and Threads already have reserved parking spaces in the site structure — links will follow when they exist.",
+      text: "For now, orders and questions live in VK, Instagram or Threads. MAX still has a reserved parking space in the site structure — the link will follow when it exists.",
       vk: "Message us / view VK"
     },
     footer: { text: "© baggots · handmade belt bags · G.O.A.T magic was here" },
