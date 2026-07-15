@@ -1347,3 +1347,60 @@ body {
   }
 }
 
+/* ===== 12052026: Goat Lab multiple prototypes ===== */
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.lab-grid .lab-card {
+  min-height: 100%;
+}
+
+.lab-grid .lab-product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.lab-grid .lab-product-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lab-grid .lab-product-copy .hero-actions {
+  margin-top: auto;
+}
+
+.lab-grid .lab-product-copy h3 {
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.lab-grid .lab-product-visual {
+  min-height: 240px;
+  margin-top: 18px;
+}
+
+.lab-grid .lab-product-visual img {
+  min-height: 240px;
+}
+
+@media (max-width: 1060px) {
+  .lab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-grid .lab-product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .lab-grid .lab-product-card {
+    display: flex;
+  }
+}
+

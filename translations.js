@@ -76,6 +76,8 @@ window.BAGGOTS_I18N = {
       text: "Козлиная лаборатория для будущих необычных сочетаний: странные ткани, переработанные материалы, заготовки, прототипы и сумки, которые сначала звучали как плохая идея.",
       open: "Открыть лабораторию",
       snakeShort: "Первая сумка Goat Lab: snake-фактура, яркие жёлтые акценты и характер, который кусается.",
+      blueShort: "Футбольный prototype в честь сборной Бразилии: синий, яркий и готовый к большому матчу.",
+      swissShort: "Чёрный prototype в честь сборной Швейцарии: сдержанный, практичный и подозрительно собранный.",
       openPrototype: "Открыть prototype"
     },
     contacts: {
@@ -171,6 +173,8 @@ window.BAGGOTS_I18N = {
       text: "The goat-powered laboratory for unusual combinations: strange fabrics, reclaimed materials, prototypes and bags that initially sounded like a terrible idea.",
       open: "Open the laboratory",
       snakeShort: "The first Goat Lab bag: snake texture, bright yellow accents and a personality with a bite.",
+      blueShort: "A football prototype for Brazil: blue, bright and ready for the big match.",
+      swissShort: "A black prototype for Switzerland: restrained, practical and suspiciously composed.",
       openPrototype: "Open prototype"
     },
     contacts: {

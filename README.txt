@@ -134,3 +134,11 @@
 - в верхнюю карусель добавлены фото Goat Lab / Snake Bite;
 - правка сделана поверх рабочей версии с официальным Threads.
 
+Обновление 12052026-goat-lab-three-prototypes:
+- в Goat Lab добавлены две новые сумки: Blue Canarinho и Swiss Shadow;
+- Blue Canarinho посвящена сборной Бразилии;
+- Swiss Shadow посвящена сборной Швейцарии;
+- добавлены фото blue-canarinho-1.jpg и swiss-shadow-1.jpg;
+- Goat Lab теперь отображает три prototype-карточки;
+- модальные окна и hero-карусель учитывают все prototype-фото.
+

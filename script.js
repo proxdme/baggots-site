@@ -183,24 +183,64 @@ const useCases = [
   }
 ];
 
-const lab = {
-  id: "snake-bite", title: "Snake Bite",
-  ru: {
-    status: "prototype",
-    price: "прототип Goat Lab",
-    description: "Экспериментальная поясная сумка с фактурой под змеиную кожу, яркими жёлтыми молниями и контрастным ремнём. Заметная, цепкая и совсем не из тех вещей, которые тихо лежат в углу. Подходит для города, прогулок и случаев, когда хочется взять с собой только нужное — но сделать это с характером.",
-    materials: "текстиль с принтом под змеиную кожу, молнии, стропа и фурнитура",
-    size: "размер прототипа уточняется"
+const labItems = [
+  {
+    id: "snake-bite", title: "Snake Bite",
+    ru: {
+      status: "prototype",
+      price: "прототип Goat Lab",
+      description: "Экспериментальная поясная сумка с фактурой под змеиную кожу, яркими жёлтыми молниями и контрастным ремнём. Заметная, цепкая и совсем не из тех вещей, которые тихо лежат в углу. Подходит для города, прогулок и случаев, когда хочется взять с собой только нужное — но сделать это с характером.",
+      materials: "текстиль с принтом под змеиную кожу, молнии, стропа и фурнитура",
+      size: "размер прототипа уточняется"
+    },
+    en: {
+      status: "prototype",
+      price: "Goat Lab prototype",
+      description: "An experimental belt bag with a faux snake-skin texture, bright yellow zippers and a bold contrast strap. Sharp, eye-catching and absolutely not the kind of piece that quietly blends into the background. Made for city walks, everyday carry and moments when you want the essentials close — with a little attitude.",
+      materials: "snake-effect printed textile, zippers, webbing and hardware",
+      size: "prototype dimensions to be confirmed"
+    },
+    photos: ["images/snake-bite-1.png", "images/snake-bite-2.png"]
   },
-  en: {
-    status: "prototype",
-    price: "Goat Lab prototype",
-    description: "An experimental belt bag with a faux snake-skin texture, bright yellow zippers and a bold contrast strap. Sharp, eye-catching and absolutely not the kind of piece that quietly blends into the background. Made for city walks, everyday carry and moments when you want the essentials close — with a little attitude.",
-    materials: "snake-effect printed textile, zippers, webbing and hardware",
-    size: "prototype dimensions to be confirmed"
+  {
+    id: "blue-canarinho", title: "Blue Canarinho",
+    ru: {
+      status: "prototype",
+      price: "прототип Goat Lab",
+      description: "Экспериментальная поясная сумка, посвящённая сборной Бразилии: синий корпус, яркий футбольный принт, чёрные молнии и настроение большого матча. Не сувенир с полки, а вещь, которая будто уже ждёт свистка и готова выйти на прогулку в стартовом составе.",
+      materials: "текстиль с футбольным принтом, стропа, молнии и фурнитура",
+      size: "размер прототипа уточняется"
+    },
+    en: {
+      status: "prototype",
+      price: "Goat Lab prototype",
+      description: "An experimental belt bag dedicated to Brazil’s national team: blue body, loud football print, black zippers and proper match-day energy. Not a shelf souvenir — more like a small starting-lineup member ready for a walk.",
+      materials: "football-print textile, webbing, zippers and hardware",
+      size: "prototype dimensions to be confirmed"
+    },
+    photos: ["images/blue-canarinho-1.jpg"]
   },
-  photos: ["images/snake-bite-1.png", "images/snake-bite-2.png"]
-};
+  {
+    id: "swiss-shadow", title: "Swiss Shadow",
+    ru: {
+      status: "prototype",
+      price: "прототип Goat Lab",
+      description: "Экспериментальная поясная сумка, посвящённая сборной Швейцарии: чёрная, сдержанная, практичная и почти подозрительно собранная. Без лишнего шума, но с тем самым характером baggots, который появляется, когда нейтральность решает выйти на поле.",
+      materials: "чёрный текстиль, стропа, молнии и фурнитура",
+      size: "размер прототипа уточняется"
+    },
+    en: {
+      status: "prototype",
+      price: "Goat Lab prototype",
+      description: "An experimental belt bag dedicated to Switzerland’s national team: black, restrained, practical and almost suspiciously composed. Quiet on the surface, but with the baggots character that appears when neutrality decides to step onto the pitch.",
+      materials: "black textile, webbing, zippers and hardware",
+      size: "prototype dimensions to be confirmed"
+    },
+    photos: ["images/swiss-shadow-1.jpg"]
+  }
+];
+
+const lab = labItems[0];
 
 let currentLanguage = "ru";
 let currentOpenItem = null;
@@ -360,7 +400,7 @@ function startHeroCarousel() {
   if (!heroCarouselImage) return;
   const gallery = [
     ...bags.map((bag) => ({ src: bag.photos[0], title: bag.title })),
-    ...lab.photos.map((photo, index) => ({ src: photo, title: index === 0 ? lab.title : `${lab.title} ${index + 1}` }))
+    ...labItems.flatMap((item) => item.photos.map((photo, index) => ({ src: photo, title: index === 0 ? item.title : `${item.title} ${index + 1}` })))
   ];
   let current = 0;
 
@@ -413,16 +453,20 @@ document.querySelectorAll("[data-use-case-id]").forEach((card) => {
   });
 });
 
-const labCard = document.querySelector("[data-open-lab]");
-if (labCard) {
-  labCard.addEventListener("click", () => openBag(lab));
-  labCard.addEventListener("keydown", (event) => {
+document.querySelectorAll("[data-lab-id]").forEach((card) => {
+  const openLabItem = () => {
+    const item = labItems.find((labItem) => labItem.id === card.dataset.labId);
+    if (item) openBag(item);
+  };
+
+  card.addEventListener("click", openLabItem);
+  card.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      openBag(lab);
+      openLabItem();
     }
   });
-}
+});
 
 if (closeModal) closeModal.addEventListener("click", hideModal);
 
