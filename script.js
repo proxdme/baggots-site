@@ -237,6 +237,24 @@ const labItems = [
       size: "prototype dimensions to be confirmed"
     },
     photos: ["images/swiss-shadow-1.jpg"]
+  },
+  {
+    id: "baggie-line", title: "baggie",
+    ru: {
+      status: "concept",
+      price: "концепт новой линейки",
+      description: "baggie — будущая маленькая линейка baggots для кошелёчков, косметичек и других небольших штук, которые обычно теряются в большой сумке и делают вид, что их там не было. Идея — сохранить козлиный характер baggots, но сделать его компактнее, шаловливее и ближе к маленьким аксессуарам.",
+      materials: "концепт линейки: кошельки, косметички, маленькие аксессуары",
+      size: "малый формат, параметры уточняются"
+    },
+    en: {
+      status: "concept",
+      price: "new line concept",
+      description: "baggie is a future small-accessories line from baggots: wallets, cosmetic pouches and other little things that usually disappear inside a bigger bag and pretend they were never there. The idea is to keep the baggots goat spirit, but make it smaller, cheekier and closer to everyday tiny carry.",
+      materials: "line concept: wallets, cosmetic pouches, small accessories",
+      size: "small format, details to be confirmed"
+    },
+    photos: ["images/baggie-logo-concept.png"]
   }
 ];
 

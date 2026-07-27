@@ -45,6 +45,11 @@ window.BAGGOTS_I18N = {
       title: "Новости",
       intro: "Короткие новости бренда. Новые записи добавляются сверху, старые остаются внутри блока.",
       aria: "Новости baggots",
+      baggieTag: "baggie",
+      baggieTitle: "baggots готовит маленькую линейку baggie",
+      baggieP1: "У baggots появилась идея для отдельной маленькой линии: кошелёчки, косметички и другие компактные штуки с тем же козлиным характером.",
+      baggieP2: "Рабочее название — baggie. Это не замена большим поясным сумкам, а их младший, более шаловливый родственник: меньше формат, больше поводов улыбнуться.",
+      baggieP3: "Пока это concept из Goat Lab, но козочка уже подозрительно уверенно смотрит в сторону молний, кармашков и маленьких полезных хаосов.",
       footballSeriesTag: "Goat Lab",
       footballSeriesTitle: "baggots продолжает футбольную серию",
       footballSeriesP1: "После первых экспериментов, вдохновлённых мундиалем, в Goat Lab появились новые prototype-сумки: Blue Canarinho и Swiss Shadow.",
@@ -83,7 +88,9 @@ window.BAGGOTS_I18N = {
       snakeShort: "Первая сумка Goat Lab: snake-фактура, яркие жёлтые акценты и характер, который кусается.",
       blueShort: "Футбольный prototype в честь сборной Бразилии: синий, яркий и готовый к большому матчу.",
       swissShort: "Чёрный prototype в честь сборной Швейцарии: сдержанный, практичный и подозрительно собранный.",
-      openPrototype: "Открыть prototype"
+      baggieShort: "Концепт маленькой линейки: кошелёчки, косметички и прочие полезные мини-шалости.",
+      openPrototype: "Открыть prototype",
+      openConcept: "Открыть concept"
     },
     contacts: {
       title: "Выбрал сумку? Пиши.",
@@ -147,6 +154,11 @@ window.BAGGOTS_I18N = {
       title: "News",
       intro: "Short updates from the brand. New stories go on top; the older ones stay inside the scroll.",
       aria: "baggots news",
+      baggieTag: "baggie",
+      baggieTitle: "baggots is preparing a small line called baggie",
+      baggieP1: "baggots has a new idea for a small-accessories line: wallets, cosmetic pouches and other compact little things with the same goat-powered personality.",
+      baggieP2: "The working name is baggie. It is not replacing the belt bags — it is their smaller, cheekier relative: less bulk, more tiny useful chaos.",
+      baggieP3: "For now, it lives as a Goat Lab concept, but the little goat is already looking suspiciously confident around zippers, pockets and small everyday adventures.",
       footballSeriesTag: "Goat Lab",
       footballSeriesTitle: "baggots continues the football series",
       footballSeriesP1: "After the first World Cup-inspired experiments, two new prototype bags have entered Goat Lab: Blue Canarinho and Swiss Shadow.",
@@ -185,7 +197,9 @@ window.BAGGOTS_I18N = {
       snakeShort: "The first Goat Lab bag: snake texture, bright yellow accents and a personality with a bite.",
       blueShort: "A football prototype for Brazil: blue, bright and ready for the big match.",
       swissShort: "A black prototype for Switzerland: restrained, practical and suspiciously composed.",
-      openPrototype: "Open prototype"
+      baggieShort: "A small-line concept: wallets, cosmetic pouches and other useful tiny mischief.",
+      openPrototype: "Open prototype",
+      openConcept: "Open concept"
     },
     contacts: {
       title: "Found your bag? Say hello.",

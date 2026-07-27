@@ -151,3 +151,10 @@
 - новость рассказывает о Blue Canarinho и Swiss Shadow в Goat Lab;
 - добавлены RU/EN тексты новости.
 
+Обновление 12052026-baggie-line:
+- добавлена новость о новой маленькой линейке baggie;
+- в Goat Lab добавлена concept-карточка baggie;
+- добавлен файл images/baggie-logo-concept.png;
+- добавлены RU/EN описания и модальное окно для concept;
+- сетка Goat Lab адаптирована под четыре карточки.
+
