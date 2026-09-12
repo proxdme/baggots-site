@@ -508,5 +508,33 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") hideModal();
 });
 
+
+
+// Soft reveal animations on scroll. No external libraries.
+document.documentElement.classList.remove("no-js");
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -8% 0px"
+  });
+
+  revealElements.forEach((element, index) => {
+    element.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
+    revealObserver.observe(element);
+  });
+} else {
+  revealElements.forEach((element) => element.classList.add("is-visible"));
+}
+
+
 setLanguage(detectInitialLanguage(), false);
 startHeroCarousel();
