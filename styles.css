@@ -1571,3 +1571,42 @@ html:not(.no-js) [data-reveal].is-visible {
   }
 }
 
+/* ===== 12052026: mobile alignment fix ===== */
+@media (max-width: 760px) {
+  .travel-flags {
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .travel-flags .country-pill {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .travel-flags .flag-svg {
+    flex: 0 0 auto;
+  }
+
+  .news-section .section-head,
+  .news-section .news-head {
+    text-align: center;
+    align-items: center;
+  }
+
+  .news-section .section-head > div,
+  .news-section .news-head > div {
+    width: 100%;
+  }
+
+  .news-section .section-kicker {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .news-section h2,
+  .news-section .section-head p,
+  .news-section .news-head p {
+    text-align: center;
+  }
+}
+
