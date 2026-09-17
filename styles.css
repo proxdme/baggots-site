@@ -1610,3 +1610,223 @@ html:not(.no-js) [data-reveal].is-visible {
   }
 }
 
+/* ===== 12052026: mobile map fit and contrast v2 ===== */
+@media (max-width: 760px) {
+  .site-world-map {
+    background-size: 112vw auto;
+    background-position: center 335px;
+    opacity: .82;
+    filter: contrast(1.85) saturate(1.05);
+    mix-blend-mode: multiply;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-world-map {
+    background-size: 108vw auto;
+    background-position: center 344px;
+    opacity: .86;
+    filter: contrast(1.95) saturate(1.08);
+  }
+}
+
+/* ===== 12052026: 5th anniversary celebration ===== */
+.anniversary-strip {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 2px;
+}
+
+.anniversary-strip-inner {
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 250, 242, .78);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 28px rgba(30,30,30,.06);
+}
+
+.anniversary-strip img {
+  width: 100%;
+  height: auto;
+  max-height: 190px;
+  object-fit: contain;
+  display: block;
+}
+
+.anniversary-section {
+  padding: 22px 0 42px;
+}
+
+.anniversary-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(260px, .75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: 34px;
+  min-height: 420px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(223,55,45,.10), transparent 28%),
+    radial-gradient(circle at 85% 25%, rgba(17,118,201,.12), transparent 32%),
+    rgba(255,250,242,.88);
+  box-shadow: 0 16px 40px rgba(30,30,30,.08);
+}
+
+.anniversary-frame {
+  position: absolute;
+  inset: -6% -4%;
+  width: 108%;
+  height: 112%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: .20;
+  z-index: 0;
+}
+
+.anniversary-fireworks {
+  position: absolute;
+  right: -70px;
+  top: -100px;
+  width: min(470px, 42vw);
+  opacity: .28;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(5deg);
+}
+
+.anniversary-badge-wrap,
+.anniversary-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.anniversary-badge {
+  width: min(100%, 390px);
+  margin: 0 auto;
+  filter: drop-shadow(0 14px 28px rgba(30,30,30,.12));
+}
+
+.anniversary-copy h2 {
+  margin: 10px 0 14px;
+  color: #1176c9;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.anniversary-copy p {
+  margin: 0;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.anniversary-dates {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.anniversary-dates strong {
+  color: #df372d;
+}
+
+.news-item--anniversary {
+  position: relative;
+  overflow: hidden;
+}
+
+.news-item--anniversary::after {
+  content: "★  ★  ★";
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  color: rgba(223,55,45,.22);
+  font-size: 28px;
+  letter-spacing: 8px;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .anniversary-card:hover .anniversary-badge {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+
+  .anniversary-badge {
+    transition: transform .3s ease;
+  }
+}
+
+@media (max-width: 760px) {
+  .anniversary-strip {
+    padding-top: 8px;
+  }
+
+  .anniversary-strip-inner {
+    border-radius: 18px;
+  }
+
+  .anniversary-strip img {
+    max-height: 122px;
+    object-fit: contain;
+  }
+
+  .anniversary-section {
+    padding: 14px 0 30px;
+  }
+
+  .anniversary-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 18px 28px;
+    min-height: 0;
+    text-align: center;
+    border-radius: 26px;
+  }
+
+  .anniversary-badge {
+    width: min(82vw, 340px);
+  }
+
+  .anniversary-copy h2 {
+    font-size: clamp(34px, 11vw, 52px);
+  }
+
+  .anniversary-copy p {
+    font-size: 18px;
+  }
+
+  .anniversary-dates {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .anniversary-fireworks {
+    width: 78vw;
+    right: -36vw;
+    top: 4%;
+    opacity: .18;
+  }
+
+  .anniversary-frame {
+    opacity: .12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anniversary-badge {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+

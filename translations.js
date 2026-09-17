@@ -20,6 +20,11 @@ window.BAGGOTS_I18N = {
       rightP1: "Яркие цвета, принты, нашивки и странные — в хорошем смысле — детали. Мы не гонимся за идеалом: делаем сумки, которые хочется носить и которые выделяют вас из стада.",
       rightP2: "Поэтому baggots не выглядят как бездушный поток с конвейера — у каждой сумки свой вайб и своё настроение."
     },
+    anniversary: {
+      kicker: "5 лет вместе",
+      title: "1 ноября baggots исполняется 5 лет",
+      text: "В 2021 году всё начиналось с идеи делать вещи с характером. К 2026-му у нас уже есть сумки, Goat Lab, новые города на карте и целая маленькая козлиная вселенная. В ноябре отмечаем первый большой юбилей — без лишнего официоза, но с салютом."
+    },
     travel: {
       label: "Где уже гуляют baggots",
       title: "Где уже гуляют baggots",
@@ -45,6 +50,11 @@ window.BAGGOTS_I18N = {
       title: "Новости",
       intro: "Короткие новости бренда. Новые записи добавляются сверху, старые остаются внутри блока.",
       aria: "Новости baggots",
+      anniversaryTag: "5 лет",
+      anniversaryTitle: "baggots готовится отметить 5-летие",
+      anniversaryP1: "1 ноября 2026 года baggots исполняется пять лет. Небольшой повод вспомнить, сколько странных тканей, молний, прототипов и хороших идей успело пройти через наши руки с 2021 года.",
+      anniversaryP2: "К юбилею сайт тоже немного нарядился: салюты, звёзды и козлики появились совершенно официально. Насколько вообще козлик может быть официальным.",
+      anniversaryP3: "Празднуем весь сезон. Пять лет — это уже достаточно серьёзно, чтобы позволить себе немного несерьёзности.",
       baggieTag: "baggie",
       baggieTitle: "baggots готовит маленькую линейку baggie",
       baggieP1: "У baggots появилась идея для отдельной маленькой линии: кошелёчки, косметички и другие компактные штуки с тем же козлиным характером.",
@@ -129,6 +139,11 @@ window.BAGGOTS_I18N = {
       rightP1: "Bright colours, prints, patches and details that are weird in the best possible way. We are not chasing sterile perfection; we make bags people actually want to wear — and that help them stand out from the herd.",
       rightP2: "That is why baggots never look like anonymous conveyor-belt products. Every bag has its own vibe and mood."
     },
+    anniversary: {
+      kicker: "5 years together",
+      title: "baggots turns 5 on November 1",
+      text: "It started in 2021 with a simple idea: make things with character. By 2026 we have bags, Goat Lab, new cities on the map and a small goat-powered universe of our own. This November we celebrate the first big anniversary — no stiff ceremony, but definitely some fireworks."
+    },
     travel: {
       label: "Where baggots are already roaming",
       title: "Where baggots are already roaming",
@@ -154,6 +169,11 @@ window.BAGGOTS_I18N = {
       title: "News",
       intro: "Short updates from the brand. New stories go on top; the older ones stay inside the scroll.",
       aria: "baggots news",
+      anniversaryTag: "5 years",
+      anniversaryTitle: "baggots is getting ready to turn 5",
+      anniversaryP1: "On November 1, 2026, baggots turns five. A good excuse to look back at how many strange fabrics, zippers, prototypes and genuinely good ideas have passed through our hands since 2021.",
+      anniversaryP2: "The website is dressing up too: fireworks, stars and goats have officially entered the layout. As official as a goat can reasonably be.",
+      anniversaryP3: "We are celebrating all season. Five years is serious enough to justify being a little less serious.",
       baggieTag: "baggie",
       baggieTitle: "baggots is preparing a small line called baggie",
       baggieP1: "baggots has a new idea for a small-accessories line: wallets, cosmetic pouches and other compact little things with the same goat-powered personality.",
